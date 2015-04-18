@@ -6,6 +6,11 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
+  
+  this.route('categories', function() {
+    this.route('category', function() {});
+  });
+
   this.resource("clients", function() {
        this.resource("client");
    });
@@ -23,6 +28,7 @@ export default Router.map(function() {
   });
 
   this.resource('courses',{ path: '/classes' }, function() {
-    this.resource('course',{ path: '/class' }, function() {});
+    this.resource('course',{ path: '/class/:id' }, function() {});
   });
+  
 });
