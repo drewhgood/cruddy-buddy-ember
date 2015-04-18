@@ -9,8 +9,13 @@ export default Router.map(function() {
   this.resource("clients", function() {
        this.resource("client");
    });
-  
+
   this.resource('users', function() {
     this.resource('user');
   });
+
+  this.resource('dependants', { path: '/swimmers' }, function() {
+    this.resource('dependant', { path: '/swimmer/:id' });
+  });
+  
 });
