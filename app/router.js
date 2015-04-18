@@ -21,4 +21,8 @@ export default Router.map(function() {
   this.resource('employees', function() {
     this.resource('employee', function() {});
   });
+
+  this.resource('courses',{ path: '/classes' }, function() {
+    this.resource('course',{ path: '/class' }, function() {});
+  });
 });
