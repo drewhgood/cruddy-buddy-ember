@@ -17,5 +17,8 @@ export default Router.map(function() {
   this.resource('dependants', { path: '/swimmers' }, function() {
     this.resource('dependant', { path: '/swimmer/:id' });
   });
-  
+
+  this.resource('employees', function() {
+    this.resource('employee', function() {});
+  });
 });
