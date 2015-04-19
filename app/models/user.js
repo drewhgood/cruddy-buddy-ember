@@ -2,19 +2,20 @@ import DS from 'ember-data';
 
 // USER
 export default DS.Model.extend({
-
- first_name: DS.attr('string'), 
- last_name: DS.attr('string'),
- email: DS.attr('string'),
- phone: DS.attr('string'),
- phone_alternate: DS.attr('string'),
- birthday: DS.attr('date'),
- gender: DS.attr('string'),
- address: DS.attr('string'),
- notes: DS.attr('string'),
- user_type: DS.attr('string'),
- password_digest: DS.attr('string'),
- created_at: DS.attr('date'),      
- updated_at: DS.attr('date'),
+ 
+ client: DS.attr(),
+ first_name: DS.attr(), 
+ last_name: DS.attr(),
+ email: DS.attr(),
+ phone: DS.attr(),
+ phone_alternate: DS.attr(),
+ birthday: DS.attr(),
+ gender: DS.attr(),
+ address: DS.attr(),
+ notes: DS.attr(),
+ user_type: DS.attr(),
+ password_digest: DS.attr(),
+ created_at: DS.attr(),      
+ updated_at: DS.attr()
   
 });

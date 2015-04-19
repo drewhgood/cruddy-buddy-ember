@@ -7,28 +7,19 @@ var Router = Ember.Router.extend({
 
 export default Router.map(function() {
   
-  this.route('categories', function() {
-    this.route('category', function() {});
-  });
+  this.resource('clients');
+  this.resource('client', { path: '/clients/:client_id'});
 
-  this.resource("clients", function() {
-       this.resource("client");
-   });
+  this.resource('users');
+  this.resource('user', { path: '/users/:user_id'});
 
-  this.resource('users', function() {
-    this.resource('user');
-  });
+  this.resource('dependants');
+  this.resource('dependant', { path: '/dependants/:dependant_id'});
 
-  this.resource('dependants', { path: '/swimmers' }, function() {
-    this.resource('dependant', { path: '/swimmer/:id' });
-  });
+  this.resource('employees');
+  this.resource('employee', { path: '/employees/:employee_id'});
 
-  this.resource('employees', function() {
-    this.resource('employee', function() {});
-  });
-
-  this.resource('courses',{ path: '/classes' }, function() {
-    this.resource('course',{ path: '/class/:id' }, function() {});
-  });
+  this.resource('courses');
+  this.resource('course', { path: '/courses/:course_id'});
   
 });

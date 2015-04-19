@@ -3,9 +3,10 @@ import DS from 'ember-data';
 // employee
 export default DS.Model.extend({
 
-  employee_id: DS.store('string'),
-  course_id: DS.store('string'),
-  start_time: DS.store(),
-  duration: DS.store()
+  certification: DS.attr(),
+  hourly_rate: DS.attr(),
+  privelege_id: DS.attr(),
+  created_at: DS.attr(),
+  updated_at: DS.attr(),
   
 });
