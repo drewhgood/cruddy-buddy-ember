@@ -9,6 +9,6 @@ export default Router.map(function() {
   this.resource('users', function() {
     this.resource('user', { path: '/:user_id' });
     this.route('new');
-    this.route('/user_id/edit');
+    this.route('/:user_id/edit');
   });
 });
