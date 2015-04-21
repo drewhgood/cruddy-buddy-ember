@@ -13,8 +13,10 @@ export default Ember.Route.extend({
 
         destroyUser: function() {
             // this.controller.get('model').destroy();
-            var self = this.controller.get('model')
-            self.destroy();
+            var user = this.controller.get('model');
+            user.deleteRecord();
+            user.save();
+             
         }
   }
 

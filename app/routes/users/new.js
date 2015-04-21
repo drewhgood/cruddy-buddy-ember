@@ -8,7 +8,7 @@ export default Ember.Route.extend({
         submitAction: function() {
             var self = this;
             this.controller.get('model').save().then( 
-                function() { 
+              function() { 
                 //     self.transitionTo('index');
             });
         }
