@@ -7,7 +7,7 @@ export default Ember.Route.extend({
             var self = this;
             this.controller.get('model').save().then( 
               function() { 
-                //     self.transitionTo('index');
+                self.transitionTo('users');
             });
         }, 
 
