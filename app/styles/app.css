@@ -1,0 +1,120 @@
+.jumbotron-gruddy {
+  background-image: url('/assets/images/jumbo.jpg');
+  background-size: cover;
+  height: 550px;
+/*  margin-top: 30px;*/
+  margin-bottom: 0px;
+}
+
+.navbar-brand {
+  font-family: Raleway;
+  font-weight: 200;
+}
+
+
+.jumbotron-gruddy h1 {
+  font-family: Raleway;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  font-size: 30pt;
+  padding: 15px;
+}
+
+#jumb-box-inner {
+  position: relative;
+  bottom: -364px;
+  background-color: #2cbd9b;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+
+.lesson-box {
+  background-color: #ffffff;
+/*  width: 100px;*/
+  padding: 20px;
+}
+
+#lessons-container, #register-container {
+/*  background-color: #f6f7fc;*/
+  width: 960px;
+  margin: 0 auto;
+}
+
+
+
+.lesson-name {
+  font-family: Raleway;
+  font-weight: 200;
+  color: #2cbd9b;
+  font-size: 20px;
+}
+
+.lesson-dscr {
+  font-family: Raleway;
+  font-weight: 200;
+  color: #434a54;
+  font-size: 12px;
+}
+
+.lesson-date-span, .lesson-price {
+  font-family: Raleway;
+  font-weight: 400;
+  color: #434a54;
+  font-size: 12px;
+  display: inline;
+}
+
+.lesson-price {
+  right: 74px;
+  position: absolute;
+}
+
+.grey-div-container {
+  background-color: #f6f7fc;
+  margin-top: 0px;
+  padding-top: 40px;
+  height: 400px;
+}
+
+.white-div-container {
+  background-color: #ffffff;
+  margin-top: 0px;
+  padding-top: 40px;
+  height: 400px;
+}
+
+.teal-div-container {
+  background-color: #2cbd9b;
+  margin-top: 0px;
+  padding-top: 40px;
+  height: 400px;
+}
+
+.teal-div-container h1 {
+  color: #fff;
+  text-align: right;
+}
+
+
+h3 {
+  font-family: Raleway;
+  font-weight: 200;
+  color: #434a54;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 30px;
+  margin: 0px;
+
+}
+
+.center-button {
+  margin: 0 auto;
+  display: table;
+  margin-top: 40px;
+}
