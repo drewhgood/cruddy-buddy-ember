@@ -11,4 +11,11 @@ export default Router.map(function() {
     this.route('new');
     this.route('edit', { path: '/:user_id/edit' });
   });
+  
+  this.resource('admin', function() {
+    this.resource('admin.employees', { path: '/employees' }, function(){
+      this.route('new');
+      this.route('show', { path: '/id' });
+    });
+  });
 });
