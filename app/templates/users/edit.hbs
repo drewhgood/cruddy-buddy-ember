@@ -1,1 +1,11 @@
 <h1> Edit a User </h1>
+
+
+{{input valueBinding="model.first_name"}}
+{{input valueBinding="model.last_name"}}
+{{input valueBinding="model.email"}}
+
+
+
+<button {{action 'submitAction'}}>Contract</button>
+<button {{action 'destroyUser'}}>Destroy</button>
