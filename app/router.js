@@ -12,3 +12,5 @@ export default Router.map(function() {
     this.route('edit', { path: '/:user_id/edit' });
   });
 });
+
+
