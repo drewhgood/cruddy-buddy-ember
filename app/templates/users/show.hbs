@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-default navbar-fixed-top">
+{{!--   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
         <a class="navbar-brand">CRUDDY BUDDY</a>
@@ -9,7 +9,7 @@
 
 
     </div>
-  </nav>
+  </nav> --}}
 
 <div id="wrapper">
 
@@ -30,16 +30,20 @@
                     </div>
                 </li>
                 <li class="active">
-                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Lessons</span></a>
+                    {{#link-to 'users.show.lessons'}}
+                    <i class="fa fa-diamond"></i> <span class="nav-label">Lessons</span>{{/link-to}}
                 </li>
                 <li>
-                    <a href="minor.html"><i class="fa fa-th-large"></i> <span class="nav-label">Calendar</span> </a>
+                    {{#link-to 'users.show.calendar'}}
+                    <i class="fa fa-calendar"></i> <span class="nav-label">Calendar</span>{{/link-to}}
                 </li>
                 <li>
-                    <a href="minor.html"><i class="fa fa-th-large"></i> <span class="nav-label">Invoices</span> </a>
+                    {{#link-to 'users.show.invoices'}}
+                    <i class="fa fa-book"></i> <span class="nav-label">Invoices</span>{{/link-to}}
                 </li>
                 <li>
-                    <a href="minor.html"><i class="fa fa-th-large"></i> <span class="nav-label">Account</span> </a>
+                    {{#link-to 'users.show.account'}}
+                    <i class="fa fa-user"></i> <span class="nav-label">Account</span> {{/link-to}}
                 </li>
             </ul>
 
