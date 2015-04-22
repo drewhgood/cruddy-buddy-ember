@@ -16,7 +16,7 @@ export default Router.map(function() {
   this.resource('admin', function() {
     this.resource('employees', function(){
       this.route('new');
-      this.route('show', { path: '/id' });
+      this.route('show', { path: '/:id' });
     });
   });
 });

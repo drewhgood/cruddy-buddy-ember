@@ -1,11 +1,10 @@
 <div class="wrapper wrapper-content animated fadeInRight">
         
-        
 
         <div class="row">
+{{#each emp in model.employee}}        
             <div class="col-lg-4">
                 <div class="contact-box">
-                    <a href="profile.html">
                     <div class="col-sm-4">
                         <div class="text-center">
                             <img alt="image" class="img-circle m-t-xs img-responsive" src="img/a2.jpg">
@@ -13,24 +12,19 @@
                         </div>
                     </div>
                     <div class="col-sm-8">
-                        <h3><strong>John Smith</strong></h3>
+                        <h3><strong>{{emp.user.first_name}}</strong></h3>
                         <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
                         <address>
-                            <strong>Twitter, Inc.</strong><br>
-                            795 Folsom Ave, Suite 600<br>
-                            San Francisco, CA 94107<br>
-                            <abbr title="Phone">P:</abbr> (123) 456-7890
+                            <strong>{{emp.user.address}}</strong><br>
+                            
+                            <abbr title="Phone">P:</abbr> {{emp.user.phone}}
                         </address>
                     </div>
                     <div class="clearfix"></div>
-                        </a>
                 </div>
             </div>
+{{/each}}
             
         </div>
-        <h1>alo</h1>
 
-        {{#each emp in employee}}
-            {{emp.certification}}
-        {{/each}}
 </div>
