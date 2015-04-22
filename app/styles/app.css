@@ -48,16 +48,14 @@
   margin: 0 auto;
 }
 
-
-
-.lesson-name {
+.lesson-box-name {
   font-family: Raleway;
   font-weight: 200;
   color: #2cbd9b;
   font-size: 20px;
 }
 
-.lesson-dscr {
+.lesson-box-description {
   font-family: Raleway;
   font-weight: 200;
   color: #434a54;
