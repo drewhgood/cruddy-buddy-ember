@@ -6,7 +6,7 @@ export default Ember.Route.extend({
     return client;
   },
   actions: {
-        submitAction: function() {
+        createClient: function() {
             var self = this;
             this.controller.get('model').save()
             .then( 
