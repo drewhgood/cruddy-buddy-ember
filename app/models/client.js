@@ -1,7 +1,20 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  user: DS.belongsTo('user'),
-  // dependants: DS.hasMany('dependant', {async:true}),
-  notes: DS.attr() 
+
+  first_name: DS.attr(), 
+  last_name: DS.attr(),
+  email: DS.attr(),
+  phone: DS.attr(),
+  phone_alternate: DS.attr(),
+  birthday: DS.attr(),
+  gender: DS.attr(),
+  a_unit: DS.attr(),
+  a_postal: DS.attr(),
+  a_number: DS.attr(),
+  a_street: DS.attr(),
+  a_city: DS.attr(),
+  notes: DS.attr(),
+  password_digest: DS.attr(),
+
 });
