@@ -14,9 +14,16 @@ export default Router.map(function() {
   });
   
   this.resource('admin', function() {
-      this.resource('employees', function(){
+    this.resource('employees', function(){
       this.route('new');
       this.route('show', { path: '/id' });
     });
   });
 });
+
+
+
+
+    // this.resource('categories', function() {
+    //   this.route('show');
+    // });
