@@ -3,7 +3,8 @@ import DS from 'ember-data';
 // USER
 export default DS.Model.extend({
  
- client: DS.attr(),
+ client: DS.belongsTo('client'),
+ employee: DS.belongsTo('employee'),
  first_name: DS.attr(), 
  last_name: DS.attr(),
  email: DS.attr(),
