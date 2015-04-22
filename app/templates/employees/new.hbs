@@ -66,10 +66,7 @@
                                 <div class="form-group">
 
                                     <div class="col-sm-12">
-                                        <select class="form-control m-b" name="account">
-                                            <option>Female</option>
-                                            <option>Male</option>
-                                        </select>
+                                        {{view "select" content=names valueBinding="model.gender"  class="col-sm-12" }}
                                     </div>
                                 </div>
 
@@ -144,7 +141,7 @@
 
                                 <div class="form-group">
                                     <div class="col-sm-12 col-sm-offset-1">
-                                        <button class="btn btn-primary" type="submit">Create Employee</button>
+                                        <button {{action 'createEmployee' class="btn btn-primary"}}>Create Employee</button>
                                         
                                     </div>
                                 </div>

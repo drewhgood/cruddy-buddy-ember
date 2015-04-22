@@ -2,17 +2,17 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    var client = this.store.createRecord('client');
-    client.names=['Male','Female'];
-    return client;
+    var employee = this.store.createRecord('employee');
+    employee.names=['Male','Female'];
+    return employee;
   },
   actions: {
-        createClient: function() {
+        createEmployee: function() {
             var self = this;
             this.controller.get('model').save()
             .then( 
                 function(data) { 
-                  self.transitionTo('/clients/'+data.id);
+                  self.transitionTo('/employees/'+data.id);
             });
         }
   }

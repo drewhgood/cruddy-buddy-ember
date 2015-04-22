@@ -12,7 +12,9 @@
                         </div>
                     </div>
                     <div class="col-sm-8">
+                    {{#link-to 'clients.show' this}} 
                         <h3><strong>{{cli.first_name}}</strong></h3>
+                    {{/link-to}}
                         <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
                         <address>
                             <strong>{{cli.address}}</strong><br>
