@@ -26,14 +26,13 @@ export default Router.map(function() {
 
     this.resource('categories', function() {
       this.route('new');
-      this.route('show', { path: '/:id' });
+      this.route('show', { path: '/:id' }, function(){
+        this.resource('courses', function() {
+          this.route('show', { path: '/:id' });
+          this.route('new');
+        });
+      });
     });
-    
-    this.resource('courses', function() {
-      this.route('show', { path: '/:id' });
-      this.route('new');
-    });
-
   });
 });
 
