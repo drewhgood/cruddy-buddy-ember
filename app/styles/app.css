@@ -127,3 +127,7 @@
   display: table;
   margin-top: 40px;
 }
+
+.uppercase {
+  text-transform: uppercase;
+}
