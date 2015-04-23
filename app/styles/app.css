@@ -52,8 +52,12 @@
 }
 
 #register-container {
-  padding-top: 70px;
+  padding-top: 30px;
 }
+
+#register-container p {
+  color: #ffffff;
+  }
 
 .lesson-box-name {
   font-family: Raleway;
@@ -110,7 +114,7 @@
 
 .teal-div-container h1 {
   color: #fff;
-  text-align: right;
+  text-align: left;
   font-family: Raleway;
 }
 
@@ -146,4 +150,8 @@
   display: table;
   margin: 0 auto;
   margin-bottom: 15px;
+}
+
+.brand-details {
+  margin-bottom: 30px;
 }
