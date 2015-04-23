@@ -28,6 +28,12 @@ export default Router.map(function() {
       this.route('new');
       this.route('show', { path: '/:id' });
     });
+    
+    this.resource('courses', function() {
+      this.route('show', { path: '/:id' });
+      this.route('new');
+    });
+
   });
 });
 
