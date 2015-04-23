@@ -12,7 +12,7 @@ export default Ember.Route.extend({
             this.controller.get('model').save()
             .then( 
                 function(data) { 
-                  self.transitionTo('/clients/'+data.id);
+                  self.transitionTo('/admin/clients/'+data.id);
             });
         }
   }

@@ -8,10 +8,11 @@ export default Ember.Route.extend({
   actions: {
         submitAction: function() {
             var self = this;
+            alert('test');
             this.controller.get('model').save()
-            .then( 
+            .then(
                 function(data) { 
-                  self.transitionTo('/employees/'+data.id);
+                  self.transitionTo('admin/employees/'+data.id);
             });
         }
   }
