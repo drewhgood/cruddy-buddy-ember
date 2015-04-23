@@ -1,32 +1,28 @@
 <div class="wrapper wrapper-content animated fadeInRight">
-        
-
-        <div class="row">
-{{#each emp in model.employee}}
-    {{#link-to 'employees.show' emp.id}}
-            <div class="col-lg-4">
-                <div class="contact-box">
-                    <div class="col-sm-4">
-                        <div class="text-center">
-                            <img alt="image" class="img-circle m-t-xs img-responsive" src="img/a2.jpg">
-                            <div class="m-t-xs font-bold">Graphics designer</div>
+    <div class="row">
+        {{#each emp in model.employee}}
+            {{#link-to 'employees.show' emp.id}}
+                    <div class="col-lg-4">
+                        <div class="contact-box">
+                            <div class="col-sm-4">
+                                <div class="text-center">
+                                    <img alt="image" class="img-circle m-t-xs img-responsive" src="img/a2.jpg">
+                                    <div class="m-t-xs font-bold">Graphics designer</div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <h3><strong>{{emp.first_name}}</strong></h3>
+                                <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
+                                <address>
+                                    <strong>{{emp.address}}</strong><br>
+                                    
+                                    <abbr title="Phone">P:</abbr> {{emp.phone}}
+                                </address>
+                            </div>
+                            <div class="clearfix"></div>
                         </div>
                     </div>
-                    <div class="col-sm-8">
-                        <h3><strong>{{emp.first_name}}</strong></h3>
-                        <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
-                        <address>
-                            <strong>{{emp.address}}</strong><br>
-                            
-                            <abbr title="Phone">P:</abbr> {{emp.phone}}
-                        </address>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-    {{/link-to}}
-{{/each}}
-            
-        </div>
-
+            {{/link-to}}
+        {{/each}}  
+    </div>
 </div>
