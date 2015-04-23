@@ -17,6 +17,15 @@ export default Router.map(function() {
     this.route('new');
   });
 
+  this.resource('clients', function(){
+    this.route('profile', { path: '/:client_id'}, function(){
+      this.route('lessons');
+      this.route('invoices');
+      this.route('calendar');
+      this.route('account');
+    });
+  });
+
   this.resource('admin', function() {
 
     this.resource('employees', function(){
