@@ -1,23 +1,23 @@
 .jumbotron-gruddy {
-  background-image: url('/assets/images/jumbo.jpg');
+  background-image: url('/assets/images/swim-jumbo.jpg');
   background-size: cover;
-  height: 550px;
+  height: 750px;
   margin-top: 30px;
   margin-bottom: 0px;
   border-radius: 0px;
 
 }
-
+/*
 .navbar-brand-cruddy {
   font-family: Raleway;
   font-weight: 200;
   color: #2cbd9b;
-}
+}*/
 
 
 .jumbotron-gruddy h1 {
   font-family: Raleway;
-  font-weight: 200;
+  font-weight: 400;
   color: white;
   text-align: center;
   font-size: 30pt;
@@ -25,9 +25,11 @@
 }
 
 #jumb-box-inner {
+  margin-top: 150px;
   position: relative;
-  bottom: -364px;
-  background-color: #2cbd9b;
+/*  bottom: -364px;*/
+  background-color: transparent;
+  border: 4px solid white;
 }
 
 .col-centered{
@@ -51,7 +53,7 @@
 .lesson-box-name {
   font-family: Raleway;
   font-weight: 200;
-  color: #2cbd9b;
+  color: #33c6dc;
   font-size: 20px;
 }
 
@@ -95,7 +97,7 @@
 }
 
 .teal-div-container {
-  background-color: #2cbd9b;
+  background-color: #33c6dc;
   margin-top: 0px;
   padding-top: 40px;
   height: 400px;
