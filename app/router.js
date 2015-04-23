@@ -6,24 +6,26 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
-  this.resource('users', function() {
-    this.route('show', { path: '/:user_id' }, function(){
-      this.route('lessons'); 
-      this.route('invoices'); 
-      this.route('calendar');
-      this.route('account');     
-    });
-    this.route('edit', { path: '/:user_id/edit' });
-    this.route('new');
-  });
+  // this.resource('users', function() {
+  //   this.route('show', { path: '/:user_id' }, function(){
+  //     this.route('lessons'); 
+  //     this.route('invoices'); 
+  //     this.route('calendar');
+  //     this.route('account');     
+  //   });
+  //   this.route('edit', { path: '/:user_id/edit' });
+  //   this.route('new');
+  // });
 
   this.resource('clients', function(){
     this.route('profile', { path: '/:client_id'}, function(){
-      this.route('lessons');
-      this.route('invoices');
-      this.route('calendar');
-      this.route('account');
+    //   this.route('lessons');
+    //   this.route('invoices');
+    //   this.route('calendar');
+    //   this.route('account');
     });
+    this.route('edit', {path: '/:client_id/edit'});
+    this.route('new');
   });
 
   this.resource('admin', function() {
