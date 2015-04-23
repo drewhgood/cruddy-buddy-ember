@@ -4994,6 +4994,31 @@ body.skin-3 {
     display: block;
   }
 }
+/*custome styles*/
+
+#default_profile{
+  height:150px;
+  width:150px;
+}
+
+#profile .col-lg-4{
+  position:fixed;
+}
+
+.navy-bg {
+  background-color: #2F4050;
+}
+
+@media (min-width: 768px){
+
+.form-horizontal .control-label {
+  text-align: left;
+  padding-bottom: 4px;
+  }
+}
+
+
+/**/
 @media (max-width: 350px) {
   .timeline-item .date {
     text-align: left;

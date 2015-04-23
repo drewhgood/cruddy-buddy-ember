@@ -3,16 +3,16 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model: function() {
     var employee = this.store.createRecord('employee');
-    employee.names=['Male','Female'];
     return employee;
   },
   actions: {
-        createEmployee: function() {
+        submitAction: function() {
             var self = this;
+            alert('test');
             this.controller.get('model').save()
-            .then( 
+            .then(
                 function(data) { 
-                  self.transitionTo('/admin/employees/'+data.id);
+                  self.transitionTo('admin/employees/'+data.id);
             });
         }
   }

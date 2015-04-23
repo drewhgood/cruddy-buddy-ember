@@ -1,12 +1,12 @@
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2>Create New Empoyee</h2>
+        <h2>Create New Client</h2>
         <ol class="breadcrumb">
             <li>
-                <a href="index.html">Employees</a>
+                <a href="index.html">Clients</a>
             </li>
             <li class="active">
-                <strong>New Employee</strong>
+                <strong>New Client</strong>
             </li>
         </ol>
     </div>
@@ -66,7 +66,8 @@
                                 <div class="form-group">
 
                                     <div class="col-sm-12">
-                                        {{view "select" content=names valueBinding="model.gender"  class="col-sm-12" }}
+                                   
+                                    {{view "select" content=names valueBinding="model.gender"  class="col-sm-12" }}
                                     </div>
                                 </div>
 
@@ -78,7 +79,7 @@
                                     <div class="col-sm-12">
                                         <div class="row">
                                             <div class="col-md-2">
-                                              {{input valueBinding="model.a_unit" class="form-control" placeholder='Unit (If Applicable)'}}
+                                              {{input valueBinding="model.a_unit" class="form-control" placeholder='Unit'}}
                                             </div>
                                             <div class="col-md-3">
                                               {{input valueBinding="model.a_number" class="form-control" placeholder='Number'}}
@@ -102,33 +103,11 @@
                                     </div>
                                 </div>
 
-
-                                <div class="hr-line-dashed"></div>
-
-
-
-                                <div class="form-group">
-                                     <label class="col-sm-2 control-label">Admin Privliges</label>
-                                  <div class="col-sm-12">
-                                    <div class="row">
-                                 <!--      <label class="col-sm-2 control-label">Administrative Privelages</label> -->
-
-                                          <div class="col-sm-6"><label class="checkbox-inline"> <input type="checkbox" value="option1" id="inlineCheckbox1"> a </label> <label class="checkbox-inline">
-                                              <input type="checkbox" value="option2" id="inlineCheckbox2"> b </label> <label class="checkbox-inline">
-                                              <input type="checkbox" value="option3" id="inlineCheckbox3"> c </label></div>
-                                          <div class="col-sm-6">                                    
-                                            {{input valueBinding="model.hourly_rate" class="form-control" placeholder='Hourly Rate'}}
-                                          </div>
-                                    </div>
-                                  </div>
-                                </div>
-
-
                                 <div class="hr-line-dashed"></div>
 
                                 <div class="form-group">
                                     <div class="col-sm-12">                                    
-                                      {{input valueBinding="model.notes" class="form-control" placeholder='Enter notes about employee (optional).'}}
+                                      {{input valueBinding="model.notes" class="form-control" placeholder='Enter notes about client (optional).'}}
                                     </div>
                                 </div>
 
@@ -141,7 +120,7 @@
 
                                 <div class="form-group">
                                     <div class="col-sm-12 col-sm-offset-1">
-                                        <button {{action 'createEmployee' class="btn btn-primary"}}>Create Employee</button>
+                                        <button {{action 'createClient' class="btn btn-primary"}}>Create Client</button>
                                         
                                     </div>
                                 </div>

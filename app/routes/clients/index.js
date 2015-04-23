@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-        return {employee: this.store.find('employee')};
+        return {client: this.store.find('client')};
+// return this.store.find('employee');
   }
 });
