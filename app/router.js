@@ -34,6 +34,7 @@ export default Router.map(function() {
       });
     });
   });
+  this.resource('events', function() {});
 });
 
 

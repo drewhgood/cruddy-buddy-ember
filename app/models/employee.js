@@ -3,6 +3,7 @@ import DS from 'ember-data';
 // employee
 export default DS.Model.extend({
 
+  events: DS.hasMany('event'),
   first_name: DS.attr(), 
   last_name: DS.attr(),
   email: DS.attr(),
