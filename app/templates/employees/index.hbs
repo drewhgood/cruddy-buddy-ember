@@ -1,7 +1,7 @@
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
         {{#each emp in model.employee}}
-            {{#link-to 'employees.show' emp.id}}
+            {{#link-to 'employees.show' emp.id tagName='div'}}
                     <div class="col-lg-4">
                         <div class="contact-box">
                             <div class="col-sm-4">
