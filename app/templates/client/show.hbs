@@ -1,3 +1,58 @@
-this is show
+<div id="wrapper profile">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span></span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li class="active">
+                    <a href="#">
+                    <i class="fa fa-diamond"></i> <span class="nav-label">Lessons</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                    <i class="fa fa-calendar"></i> <span class="nav-label">Calendar</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                    <i class="fa fa-book"></i> <span class="nav-label">Invoices</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                    <i class="fa fa-user"></i> <span class="nav-label">Account</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-{{outlet}}
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    {{outlet}}
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="pull-right">
+                Be awesome.
+            </div>
+            <div>
+                <strong>Copyright</strong> Splashers &copy; 2015
+            </div>
+        </div>
+
+    </div>
+</div>
