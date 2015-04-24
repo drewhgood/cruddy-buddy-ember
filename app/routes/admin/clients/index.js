@@ -5,4 +5,5 @@ export default Ember.Route.extend({
         return {client: this.store.find('client')};
 // return this.store.find('employee');
   }
+
 });

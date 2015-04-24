@@ -4,6 +4,7 @@ import DS from 'ember-data';
 export default DS.Model.extend({
 
   client: DS.belongsTo('client', {async: true}),
+  registration: DS.hasMany('registration', {async: true}),
   first_name: DS.attr(),
   last_name: DS.attr(),
   birthday: DS.attr(),
@@ -13,3 +14,5 @@ export default DS.Model.extend({
   notes: DS.attr()
   
 });
+
+

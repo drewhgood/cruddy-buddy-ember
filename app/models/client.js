@@ -1,7 +1,10 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-
+  dependants: DS.hasMany('dependant', {async: true}),
+  registrations: DS.hasMany('registration', {async: true}),
+  payments: DS.hasMany('payment', {async: true}),
+  courses: DS.hasMany('course', {async: true}),
   first_name: DS.attr(), 
   last_name: DS.attr(),
   email: DS.attr(),
@@ -22,3 +25,6 @@ export default DS.Model.extend({
     return this.get('first_name') + ' ' + this.get('last_name');
   }.property('first_name', 'last_name')
 });
+
+
+
