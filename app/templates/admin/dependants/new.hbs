@@ -1,0 +1,188 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Create New Client</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">Clients</a>
+            </li>
+            <li class="active">
+                <strong>New Client</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+
+    </div>
+</div>   
+
+<br>
+   <div class="col-lg-8">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <form method="get" class="form-horizontal">
+                                <div class="form-group">
+                                  <div class="col-sm-12">
+                                    {{input valueBinding="model.first_name" class="form-control" placeholder='First Name' placeholder='First Name'}}
+                                  </div>
+                                </div>
+                                
+                                <div class="form-group">
+
+                                    <div class="col-sm-12">                                    {{input valueBinding="model.last_name" class="form-control" placeholder='First Name'}}</div>
+                                </div>
+
+                                <div class="hr-line-dashed"></div>
+
+                                <div class="form-group">
+
+                                    <div class="col-sm-12">                                    {{input valueBinding="model.birthday" class="form-control" placeholder='Birthday'}}</div>
+                                </div>
+
+                                <div class="hr-line-dashed"></div>
+                                
+
+                                <div class="form-group">
+
+                                    <div class="col-sm-12">                                    {{input valueBinding="model.email" class="form-control" placeholder='Email'}}</div>
+                                </div>
+
+                                <div class="hr-line-dashed"></div>
+
+
+                                <div class="form-group">
+
+                                    <div class="col-sm-12">                                    {{input valueBinding="model.phone" class="form-control" placeholder='Phone'}}</div>
+                                </div>
+
+                                <div class="form-group">
+
+                                    <div class="col-sm-12">                                    {{input valueBinding="model.phone_alternate" class="form-control" placeholder='Alternate Phone'}}</div>
+                                </div>
+
+                                <div class="hr-line-dashed"></div>
+
+
+
+                                <div class="form-group">
+
+                                    <div class="col-sm-12">
+                                   
+                                    {{view "select" content=names valueBinding="model.gender"  class="col-sm-12" }}
+                                    </div>
+                                </div>
+
+                                <div class="hr-line-dashed"></div>
+
+                                <label class="col-sm-2 control-label">Address</label>
+                                 <div class="form-group">
+
+                                    <div class="col-sm-12">
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                              {{input valueBinding="model.a_unit" class="form-control" placeholder='Unit'}}
+                                            </div>
+                                            <div class="col-md-3">
+                                              {{input valueBinding="model.a_number" class="form-control" placeholder='Number'}}
+                                            </div>
+                                            <div class="col-md-7">
+                                              {{input valueBinding="model.a_street" class="form-control" placeholder='Street / Avenue'}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="form-group">
+                                    <div class="col-sm-12">                                    
+                                      {{input valueBinding="model.a_city" class="form-control" placeholder="City"}}
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">                                    
+                                      {{input valueBinding="model.a_postal" class="form-control" placeholder='Postal Code'}}
+                                    </div>
+                                </div>
+
+                                <div class="hr-line-dashed"></div>
+
+                                <div class="form-group">
+                                    <div class="col-sm-12">                                    
+                                      {{input valueBinding="model.notes" class="form-control" placeholder='Enter notes about client (optional).'}}
+                                    </div>
+                                </div>
+
+
+                                <div class="hr-line-dashed"></div>
+
+                               <!--  <div class="form-group">
+                                </div>
+ -->
+
+                                <div class="form-group">
+                                    <div class="col-sm-12 col-sm-offset-1">
+                                        <button {{action 'createClient' class="btn btn-primary"}}>Create Client</button>
+                                        
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4" id="profile">
+                        <div class="widget-head-color-box navy-bg p-lg text-center">
+                            <div class="m-b-md">
+                            <h2 class="font-bold no-margins">
+                               {{model.first_name}} {{model.last_name}}
+                            </h2>
+                            {{#if model.birthday}}
+                                <small>{{model.birthday}}</small>
+                            {{/if}}
+                            </div>
+                            <img src="assets/images/avatar-m.png" id="default_profile" class="img-circle circle-border m-b-md" alt="profile">
+
+                            <ul class="list-unstyled m-t-md">
+                            {{#if model.email}}
+                            <li>
+                                <span class="fa fa-envelope m-r-xs"></span>
+                                <label>Email:</label>
+                                {{model.email}}
+                            </li>
+                            {{/if}}
+                            {{#if model.a_number}}
+                            <li>
+                                <span class="fa fa-home m-r-xs"></span>
+                                <label>Address:</label>
+                                {{#if model.a_unit}}#{{model.a_unit}}-{{/if}}{{model.a_number}}, {{a_street}}
+                                {{#if model.a_city}}<br> {{model.a_city}}, B.C. {{/if}} - {{model.a_postal}}
+                            </li>
+                            {{/if}}
+                            {{#if model.phone}}
+                            <li>
+                                <span class="fa fa-phone m-r-xs"></span>
+                                <label>Contact:</label>
+                                {{model.phone}}
+                                {{#if model.phone_alternate}}
+                                  <br><span class="fa fa-phone m-r-xs"></span>
+                                  <label>Alternate:</label>{{model.phone_alternate}}
+                                {{/if}}
+                            </li>
+                            {{/if}}
+                        </ul>
+                        </div>
+                        {{#if model.notes}}
+                        <div class="widget-text-box">
+                            <h4 class="media-heading">Notes:</h4>
+                            <p>{{model.notes}}</p>
+                        </div>
+                        {{/if}}
+                </div>
+
+
+
+
+
+
+

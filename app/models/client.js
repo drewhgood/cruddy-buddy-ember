@@ -20,10 +20,27 @@ export default DS.Model.extend({
   a_city: DS.attr(),
   notes: DS.attr(),
   password_digest: DS.attr(),
-  
+
   fullName: function() {
     return this.get('first_name') + ' ' + this.get('last_name');
-  }.property('first_name', 'last_name')
+  }.property('first_name', 'last_name'),
+
+  registrationCount: function() {
+    return this.get('registrations.length');
+  }.property('registrations'),
+
+  age: function(){
+    var today = new Date();
+    var birthday =  new Date(this.get('birthday'));
+    var age = today.getFullYear() - birthday.getFullYear();
+    var m = today.getMonth() - birthday.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) 
+    {
+        age--;
+    }
+    return age;
+  }.property('birthday'),
+
 });
 
 

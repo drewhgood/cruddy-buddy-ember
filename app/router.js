@@ -30,6 +30,11 @@ export default Router.map(function() {
       this.route('show', { path: '/:id' });
     });
 
+    this.route('dependants', function() {
+      this.route('new');
+      this.route('show', { path: '/:id' });
+    });
+
     this.route('payments', function() {
       this.route('new');
       this.route('show', { path: '/:id' });
