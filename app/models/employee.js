@@ -3,6 +3,8 @@ import DS from 'ember-data';
 // employee
 export default DS.Model.extend({
 
+  course: DS.belongsTo('course'),
+  events: DS.hasMany('event'),
   first_name: DS.attr(), 
   last_name: DS.attr(),
   email: DS.attr(),
@@ -19,6 +21,7 @@ export default DS.Model.extend({
   password_digest: DS.attr(),
   certification: DS.attr(),
   hourly_rate: DS.attr(),
+
   
   fullName: function() {
     return this.get('first_name') + ' ' + this.get('last_name');
