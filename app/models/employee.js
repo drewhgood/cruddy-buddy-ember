@@ -3,6 +3,7 @@ import DS from 'ember-data';
 // employee
 export default DS.Model.extend({
 
+  course: DS.belongsTo('course'),
   events: DS.hasMany('event'),
   first_name: DS.attr(), 
   last_name: DS.attr(),

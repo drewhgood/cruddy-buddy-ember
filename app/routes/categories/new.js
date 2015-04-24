@@ -14,5 +14,6 @@ export default Ember.Route.extend({
                   self.transitionTo('/admin/categories/'+data.id);
             });
         }
-  }
+  } 
+
 });
