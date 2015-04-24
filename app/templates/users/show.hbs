@@ -1,5 +1,59 @@
-<h1> User Instance </h1>
+<div id="wrapper profile">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span></span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
+                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li class="active">
+                    {{#link-to 'users.show.lessons'}}
+                    <i class="fa fa-diamond"></i> <span class="nav-label">Lessons</span>{{/link-to}}
+                </li>
+                <li>
+                    {{#link-to 'users.show.calendar'}}
+                    <i class="fa fa-calendar"></i> <span class="nav-label">Calendar</span>{{/link-to}}
+                </li>
+                <li>
+                    {{#link-to 'users.show.invoices'}}
+                    <i class="fa fa-book"></i> <span class="nav-label">Invoices</span>{{/link-to}}
+                </li>
+                <li>
+                    {{#link-to 'users.show.account'}}
+                    <i class="fa fa-user"></i> <span class="nav-label">Account</span> {{/link-to}}
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-{{model.first_name}}-{{model.employee.certification}}
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    {{outlet}}
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="pull-right">
+                Be awesome.
+            </div>
+            <div>
+                <strong>Copyright</strong> Splashers &copy; 2015
+            </div>
+        </div>
 
-{{#link-to 'users'}} Users {{/link-to}}
+    </div>
+</div>
+
