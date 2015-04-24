@@ -1,7 +1,7 @@
-<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
-        {{#each cat in model.category}} 
-            {{#link-to 'categories.show' cat.id tagName='div'}}       
+        {{#each cour in model.course}} 
+            {{#link-to 'admin.courses.show' cour.id tagName='div'}}       
                     <div class="col-lg-4">
                         <div class="contact-box">
                             <div class="col-sm-4">
@@ -11,8 +11,15 @@
                                 </div>
                             </div>
                             <div class="col-sm-8">
-                                <h3><strong>{{cat.title}}</strong></h3>
-                                <p>{{cat.description}}</p>
+                                <h3><strong>{{cour.name}}</strong></h3>
+                                <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
+                                <address>
+                                    <strong>{{cour.capacity}}</strong><br>
+                                    <strong>${{cour.session_cost}}</strong><br>
+
+                                    
+                                    
+                                </address>
                             </div>
                             <div class="clearfix"></div>
                         </div>

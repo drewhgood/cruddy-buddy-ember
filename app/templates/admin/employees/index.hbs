@@ -1,7 +1,7 @@
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
         {{#each emp in model.employee}}
-            {{#link-to 'employees.show' emp.id tagName='div'}}
+            {{#link-to 'admin.employees.show' emp.id tagName='div'}}
                     <div class="col-lg-4">
                         <div class="contact-box">
                             <div class="col-sm-4">
@@ -11,7 +11,7 @@
                                 </div>
                             </div>
                             <div class="col-sm-8">
-                                <h3><strong>{{emp.first_name}}</strong></h3>
+                                <h3><strong>{{emp.fullName}}</strong></h3>
                                 <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
                                 <address>
                                     <strong>{{emp.address}}</strong><br>

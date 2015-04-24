@@ -17,4 +17,8 @@ export default DS.Model.extend({
   notes: DS.attr(),
   password_digest: DS.attr(),
 
+
+  fullName: function() {
+    return this.get('first_name') + ' ' + this.get('last_name');
+  }.property('first_name', 'last_name')
 });

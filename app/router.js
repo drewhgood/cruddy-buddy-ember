@@ -12,27 +12,38 @@ export default Router.map(function() {
   //   this.route('new');
   // });
 
+  this.resource('clients', function() {
+    this.route('show', { path: '/:id' });
+  });
+
+
+
   this.resource('admin', function() {
      
-    this.resource('employees', function(){
+    this.route('employees', function(){
       this.route('new');
       this.route('show', { path: '/:id' });
     });
 
-    this.resource('clients', function() {
+    this.route('courses', function(){
       this.route('new');
       this.route('show', { path: '/:id' });
     });
 
-    this.resource('payments', function() {
+    this.route('clients', function() {
       this.route('new');
       this.route('show', { path: '/:id' });
     });
 
-    this.resource('categories', function() {
+    this.route('payments', function() {
+      this.route('new');
+      this.route('show', { path: '/:id' });
+    });
+
+    this.route('categories', function() {
       this.route('new');
       this.route('show', { path: '/:id' }, function(){
-        this.resource('courses', function() {
+        this.route('courses', function() {
           this.route('show', { path: '/:id' });
           this.route('new');
         });
