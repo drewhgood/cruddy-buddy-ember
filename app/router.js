@@ -8,10 +8,12 @@ var Router = Ember.Router.extend({
 export default Router.map(function() {
 
   this.resource('client', { path: '/' }, function() {
-      this.route('calendar'); 
-      this.route('lessons');
-      this.route('account');
-      this.route('payments'); 
+      this.route('show', function(){
+        this.route('calendar'); 
+        this.route('lessons');
+        this.route('account');
+        this.route('payments');         
+      });
   });
 
 
