@@ -6,11 +6,6 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
-  // this.resource('users', function() {
-  //   this.route('show', { path: '/:user_id' });
-  //   this.route('edit', { path: '/:user_id/edit' });
-  //   this.route('new');
-  // });
 
   this.resource('clients', function() {
     this.route('show', { path: '/:id' });
@@ -48,10 +43,3 @@ export default Router.map(function() {
     });
   });
 });
-
-
-
-
-    // this.resource('categories', function() {
-    //   this.route('show');
-    // });
