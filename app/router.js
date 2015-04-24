@@ -43,10 +43,7 @@ export default Router.map(function() {
     this.route('categories', function() {
       this.route('new');
       this.route('show', { path: '/:id' }, function(){
-        this.route('courses', function() {
-          this.route('show', { path: '/:id' });
-          this.route('new');
-        });
+        
       });
     });
   });
