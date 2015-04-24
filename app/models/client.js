@@ -2,6 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
 
+  dependants: DS.hasMany('dependant'),
   first_name: DS.attr(), 
   last_name: DS.attr(),
   email: DS.attr(),
