@@ -7,11 +7,11 @@ var Router = Ember.Router.extend({
 
 export default Router.map(function() {
 
-  this.resource('clients', { path: '/' }, function() {
-    this.route('show', { path: '/:id'}, function(){
+  this.resource('client', { path: '/' }, function() {
       this.route('calendar'); 
-      this.route('payments');
-    });
+      this.route('lessons');
+      this.route('account');
+      this.route('payments'); 
   });
 
 
