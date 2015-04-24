@@ -7,15 +7,15 @@
                             <div class="col-sm-4">
                                 <div class="text-center">
                                     <img alt="image" class="img-circle m-t-xs img-responsive" src="assets/images/avatar-m.png">
-                                    <div class="m-t-xs font-bold">Graphics designer</div>
                                 </div>
                             </div>
                             <div class="col-sm-8">
-                                <h3><strong>{{cli.first_name}}</strong></h3>
-                                <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
+                                <h3><strong>{{cli.fullName}}</strong></h3>
+                               <!--  {{#each dep in model.dependant}}
+                                <p><i class="fa fa-map-child"></i>{{dep.fullName}}</p>
+                                {{/each}} -->
+                                 <p><i class="fa fa-child"></i> Child Name</p>
                                 <address>
-                                    <strong>{{cli.address}}</strong><br>
-                                    
                                     <abbr title="Phone">P:</abbr> {{cli.phone}}
                                 </address>
                             </div>
