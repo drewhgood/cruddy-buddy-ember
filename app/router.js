@@ -10,6 +10,7 @@ export default Router.map(function() {
   this.resource('clients', { path: '/' }, function() {
     this.route('show', { path: '/:id'}, function(){
       this.route('calendar'); 
+      this.route('payments');
     });
   });
 
