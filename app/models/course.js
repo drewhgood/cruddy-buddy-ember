@@ -17,7 +17,7 @@ export default DS.Model.extend({
     var events = this.get('events').toArray();
     var smallestDate = new Date(events[0].get('start_time'));
 
-    events.forEach(function(e, index){  
+    events.forEach(function(e){  
 
       var event_start_time =  e.get('start_time');
 
@@ -34,7 +34,7 @@ export default DS.Model.extend({
     var events = this.get('events').toArray();
     var greaterDate = new Date(events[0].get('start_time'));
 
-    events.forEach(function(e, index){  
+    events.forEach(function(e){  
 
       var event_start_time =  new Date(e.get('start_time'));
 

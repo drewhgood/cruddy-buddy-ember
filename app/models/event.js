@@ -10,7 +10,7 @@ export default DS.Model.extend({
   displayStartDate: function(){
     var startTime = new Date(this.get('start_time'));
 
-    return moment(startTime).format('MMM Do')
+    return moment(startTime).format('MMM Do');
   }.property('start_time'),
 
 
@@ -18,7 +18,7 @@ export default DS.Model.extend({
   displayStartTime: function(){
     var startTime = new Date(this.get('start_time'));
 
-    return moment(startTime).format('h:mm a')
+    return moment(startTime).format('h:mm a');
   }.property('start_time'),
 
 
