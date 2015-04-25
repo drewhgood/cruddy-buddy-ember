@@ -71,7 +71,7 @@
                         </div>
                         <div class="col-xs-8 text-right">
                             <span> Total Lessons </span>
-                            <h2 class="font-bold">12</h2>
+                            <h2 class="font-bold">{{model.employee.first_name}}</h2>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                 <div class="col-lg-8">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
-                            <h5>{{model.employee.first_name}}'s Lessons</h5>
+                            <h3>{{model.employee.first_name}}'s Lessons</h3>
                         </div>
                         <div class="ibox-content">
                             <div class="row">
@@ -110,9 +110,9 @@
 
                                         <th></th>
                                         <th>Name</th>
-                                        <th></th>
+                                        <th>Start - End</th>
+                                        <th>Course Duration</th>
                                         <th>Capacity</th>
-                                        <th>Run Start - End</th>
                                         <th>Full</th>
                                     </tr>
                                     </thead>
@@ -123,7 +123,10 @@
 
                                         <td><small>{{ev.course.name}}</small></td>
 
-                                        <td></td>
+                                        <td>
+                                            {{#link-to 'admin.courses.show' ev.course.id}}{{course.name}}{{/link-to}}
+                                        </td>
+                                         <td>{{ev.duration}}h</td>
 
                                         <td>0/{{ev.course.capacity}}</td>
                                         <td></td>

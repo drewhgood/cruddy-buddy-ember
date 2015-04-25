@@ -1,6 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
+  
   dependants: DS.hasMany('dependant', {async: true}),
   registrations: DS.hasMany('registration', {async: true}),
   payments: DS.hasMany('payment', {async: true}),
@@ -19,11 +20,14 @@ export default DS.Model.extend({
   a_city: DS.attr(),
   notes: DS.attr(),
   password_digest: DS.attr(),
- 
 
   fullName: function() {
     return this.get('first_name') + ' ' + this.get('last_name');
   }.property('first_name', 'last_name'),
+
+  registrationCount: function() {
+    return this.get('registrations.length');
+  }.property('registrations.@each'),
 
   age: function(){
     var today = new Date();
@@ -35,7 +39,8 @@ export default DS.Model.extend({
         age--;
     }
     return age;
-  }.property('birthday')
+
+  }.property('birthday.@each')
 
 
 });

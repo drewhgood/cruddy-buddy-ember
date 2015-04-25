@@ -6,4 +6,8 @@ export default DS.Model.extend({
   title: DS.attr(), 
   description: DS.attr(),
 
+  courseCount: function() {
+    return this.get('courses.length');
+  }.property('courses'),
+
 });
