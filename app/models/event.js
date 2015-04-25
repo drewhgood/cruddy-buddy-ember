@@ -7,7 +7,6 @@ export default DS.Model.extend({
   start_time: DS.attr(),
   duration: DS.attr(),
 
-
   end_time: function() {
     var start_time = new Date(this.get('start_time'));
 
@@ -16,6 +15,5 @@ export default DS.Model.extend({
       var end_datetime = start_time.getHours();
     return end_datetime;
   }.property('start_time,duration')
-
 
 });
