@@ -28,8 +28,25 @@ export default DS.Model.extend({
     });
 
     return month[smallest_date.getMonth()] + '/' + smallest_date.getDate();
+  }.property('events.@each.start_time'),
 
-  }.property('events.@each.start_time')
+  end_date: function(){
+
+    var events = this.get('events').toArray();
+    var greater_date = new Date(events[0].get('start_time'));
+    var month = ["January","February","March","March","May","June","July","August","September","October","November","December"];
+
+    events.forEach(function(e, index){  
+
+      var event_start_time =  new Date(e.get('start_time'));
+
+      if(greater_date < event_start_time) {
+        greater_date = event_start_time;
+      }
+    });
+
+    return month[greater_date.getMonth()] + '/' + greater_date.getDate();
+  }.property('events.@each.start_time'),
 
   spotsFilled: function() {
     return this.get('registrations.length');
