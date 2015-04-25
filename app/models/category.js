@@ -7,7 +7,7 @@ export default DS.Model.extend({
   description: DS.attr(),
 
   courseCount: function() {
-    return this.get('courses').length;
+    return this.get('courses.length');
   }.property('courses'),
 
 });

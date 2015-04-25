@@ -114,7 +114,7 @@
                                         <th>Course</th>
                                         <th></th>
                                         <th>Capacity</th>
-                                        <th>Run Start - End</th>
+                                        <th>Start - End</th>
                                         <th>Full</th>
                                     </tr>
                                     </thead>
@@ -127,10 +127,10 @@
 
                                         <td></td>
 
-                                        <td>0/{{cour.capacity}}</td>
+                                        <td>{{cour.spotsFilled}}/{{cour.capacity}}</td>
                                         <td></td>
 
-                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                        <td>{{#if cour.atCapacity}}<a href="#"><i class="fa fa-check text-navy"></i></a>{{/if}}</td>
                                     </tr>
 
                                    {{/each}}                                
