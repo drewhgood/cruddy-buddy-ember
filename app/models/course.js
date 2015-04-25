@@ -12,40 +12,38 @@ export default DS.Model.extend({
   level: DS.attr(),
 
 
-  start_date: function(){
+  startDate: function(){
 
     var events = this.get('events').toArray();
-    var smallest_date = new Date(events[0].get('start_time'));
-    var month = ["January","February","March","March","May","June","July","August","September","October","November","December"];
+    var smallestDate = new Date(events[0].get('start_time'));
 
     events.forEach(function(e, index){  
 
-      var event_start_time =  new Date(e.get('start_time'));
+      var event_start_time =  e.get('start_time');
 
-      if(smallest_date > event_start_time) {
-        smallest_date = event_start_time;
+      if(smallestDate > event_start_time) {
+        smallestDate = event_start_time;
       }
     });
 
-    return month[smallest_date.getMonth()] + '/' + smallest_date.getDate();
+    return moment(smallestDate).format('MMM Do');
   }.property('events.@each.start_time'),
 
-  end_date: function(){
+  endDate: function(){
 
     var events = this.get('events').toArray();
-    var greater_date = new Date(events[0].get('start_time'));
-    var month = ["January","February","March","March","May","June","July","August","September","October","November","December"];
+    var greaterDate = new Date(events[0].get('start_time'));
 
     events.forEach(function(e, index){  
 
       var event_start_time =  new Date(e.get('start_time'));
 
-      if(greater_date < event_start_time) {
-        greater_date = event_start_time;
+      if(greaterDate < event_start_time) {
+        greaterDate = event_start_time;
       }
     });
 
-    return month[greater_date.getMonth()] + '/' + greater_date.getDate();
+    return moment(greaterDate).format('MMM Do');
   }.property('events.@each.start_time'),
 
   spotsFilled: function() {
