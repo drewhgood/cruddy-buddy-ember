@@ -9,8 +9,13 @@ export default DS.Model.extend({
 
 
   end_time: function() {
-  //WIP   return this.get('first_name') + ' ' + this.get('last_name');
-  // }.property('first_name', 'last_name')
-  }
+    var start_time = new Date(this.get('start_time'));
+
+    start_time.setHours(start_time.getHours() + parseInt(this.get('duration')));
+
+      var end_datetime = start_time.getHours();
+    return end_datetime;
+  }.property('start_time,duration')
+
 
 });

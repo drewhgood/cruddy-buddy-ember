@@ -18,13 +18,14 @@
                                         <div class="col-lg-8">
                 
                                             <ul>
+                                            <li>Age: {{model.client.age}}</li>
                                             {{#each dep in  model.client.dependants}}
                                             <li>{{dep.first_name}}</li>
                                             {{/each}}
                                                 <li></li>
                                                 <li>Email: {{model.client.email}}</li>
                                                 <li>Phone: 778.855.4530</li>
-                                                <li>Age: 27</li>
+                                                <li>Age: {}</li>
                                                 <li>Address: 1422 123 st Surrey, BC.</li>
                                             </ul>    
 
