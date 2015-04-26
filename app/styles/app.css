@@ -41,7 +41,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
 }
 
 
-.jumbotron-gruddy, .jumbotron-team h1 {
+.jumbotron-gruddy h1 {
   font-family: Raleway;
   font-weight: 400;
   color: white;
