@@ -5023,8 +5023,7 @@ body.skin-3 {
 }
 
 #default_profile{
-  height:150px;
-  width:150px;
+
 }
 
 #profile .col-lg-4{
@@ -5036,9 +5035,8 @@ body.skin-3 {
 }
 
 .closeContact {
-  position: relative;
-  top: -11px;
-  right: -202px;
+    position: static !important;
+  text-align: right;
 }
 
 .closeContact:hover{
@@ -5053,12 +5051,23 @@ body.skin-3 {
   margin-left: 15px;
 }
 
+.cart{
+  position:relative;
+}
+
 @media (min-width: 768px){
 
 .form-horizontal .control-label {
   text-align: left;
   padding-bottom: 4px;
   }
+}
+
+@media (max-width: 1600px) {
+  .col-sm-4.cart {
+    display:none;
+  }
+
 }
 
 
