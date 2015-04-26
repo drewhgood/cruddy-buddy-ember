@@ -10,6 +10,7 @@ export default DS.Model.extend({
   capacity: DS.attr(),
   session_cost: DS.attr(),
   level: DS.attr(),
+  description: DS.attr(),
   created_at: DS.attr(),
   updated_at: DS.attr(),
 
