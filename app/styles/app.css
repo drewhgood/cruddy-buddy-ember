@@ -71,6 +71,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
   box-shadow: 0px -2px 0px #cbd0da;
 }
 
+.lesson-box {
+  margin-bottom: 15px;
+}
+
 .lessons-container, #register-container {
 /*  background-color: #f6f7fc;*/
   width: 960px;
@@ -274,4 +278,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
 
 .stack-container h2 {
   margin-top: 40px;
+}
+
+.lessons-bg {
+  background-color: #e6e9ee;
+}
+
+.lessons-bg h2 {
+  text-align: center;
+  margin: 50px;
+  text-transform: uppercase;
 }
