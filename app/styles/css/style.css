@@ -5003,9 +5003,27 @@ body.skin-3 {
 }
 /*custome styles*/
 
+#cart {
+  position:fixed;
+  bottom:0;
+  left:0;
+  background-color: #3E4359;
+  height:250px;
+  width:100%;
+  margin-left: 0px;
+  display: none;
+}
+
+#cartClass{
+  margin-top: 60px;
+}
+
+#special {
+  margin-bottom: 50px;
+}
+
 #default_profile{
-  height:150px;
-  width:150px;
+
 }
 
 #profile .col-lg-4{
@@ -5016,12 +5034,40 @@ body.skin-3 {
   background-color: #2F4050;
 }
 
+.closeContact {
+    position: static !important;
+  text-align: right;
+}
+
+.closeContact:hover{
+  color:rgb(214, 157, 157);
+  cursor: pointer;
+}
+
+#cart h2{
+  color: white;
+  position: absolute;
+  top: -46px;
+  margin-left: 15px;
+}
+
+.cart{
+  position:relative;
+}
+
 @media (min-width: 768px){
 
 .form-horizontal .control-label {
   text-align: left;
   padding-bottom: 4px;
   }
+}
+
+@media (max-width: 1600px) {
+  .col-sm-4.cart {
+    display:none;
+  }
+
 }
 
 

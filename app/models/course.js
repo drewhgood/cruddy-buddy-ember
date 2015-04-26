@@ -10,6 +10,9 @@ export default DS.Model.extend({
   capacity: DS.attr(),
   session_cost: DS.attr(),
   level: DS.attr(),
+  description: DS.attr(),
+  created_at: DS.attr(),
+  updated_at: DS.attr(),
 
 
   startDate: function(){
@@ -55,8 +58,5 @@ export default DS.Model.extend({
     var filled = this.get('spotsFilled');
     return cap <= filled;
   }.property('spotsFilled.@each', 'capacity.@each'),
-
-
-
 
 });
