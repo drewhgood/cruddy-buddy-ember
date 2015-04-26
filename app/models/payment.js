@@ -16,13 +16,13 @@ export default DS.Model.extend({
 
   tax: function(){
     var total = this.get('total');
-    return  total * 0.05
+    return  total * 0.05;
 
   }.property('total'),
 
   subTotal: function(){
     var total = this.get('total');
-    return  total * 0.95
+    return  total * 0.95;
 
   }.property('total')
 
