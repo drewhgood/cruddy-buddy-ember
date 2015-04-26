@@ -185,3 +185,11 @@
   min-height: 200px;
 }
 
+#classes {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f7fc;
+}
+
+.navbar-right~.navbar-right {
+  margin-right: 30px;
