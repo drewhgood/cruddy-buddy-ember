@@ -38,7 +38,7 @@
 }
 
 
-.lesson-box {
+.lesson-box, .contact-box {
   background-color: #ffffff;
 /*  width: 100px;*/
   padding: 20px;
@@ -171,4 +171,11 @@
   margin-top: 10px;
 }
 
-.bg-box 
+#side-menu a {
+  color: #fff;
+}
+
+.contact-box h3 {
+  color:#33c6dc;
+  font-weight: 200;
+
