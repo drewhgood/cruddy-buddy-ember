@@ -675,6 +675,12 @@ fieldset[disabled] .btn-info.active {
   border-color: #434a54;
   color: #434a54;
 }
+
+
+.btn-default a {
+  color: #434a54;
+
+}
 .btn-default:hover,
 .btn-default:focus,
 .btn-default:active,
@@ -1550,7 +1556,7 @@ table.dataTable thead .sorting:after {
 }
 /* PEACE */
 .pace .pace-progress {
-  background: #1ab394;
+  background: #33c6dc;
   position: fixed;
   z-index: 2000;
   top: 0px;

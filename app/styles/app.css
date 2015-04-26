@@ -164,3 +164,11 @@
   height: 65px;
   width: auto;
 }
+
+.profile-name {
+  font-size: 15pt;
+  color: white;
+  margin-top: 10px;
+}
+
+.bg-box 
