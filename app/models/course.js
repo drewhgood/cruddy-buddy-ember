@@ -12,7 +12,7 @@ export default DS.Model.extend({
   level: DS.attr(),
   created_at: DS.attr(),
   updated_at: DS.attr(),
-
+  inCart: false,
 
   startDate: function(){
 
