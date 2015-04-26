@@ -17,6 +17,8 @@
            {{else}}
               <button {{action "addToCart" course bubbles=false class="btn btn-primary"}}>add to cart</button>
            {{/if}}
+           <div{{action "test"}}>test</div>
+           {{controller.count}}
         </div>
       </div>
       {{/link-to}}
@@ -26,7 +28,7 @@
 </div>
 
 <div id="cart" class="row">
-  <h2>Your Courses {{model.course.numberInCart}}</h2>
+  <h2>Your Courses</h2>
 
       {{#each course in model.courses}}
         {{#if course.inCart}}

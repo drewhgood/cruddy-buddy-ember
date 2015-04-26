@@ -14,6 +14,7 @@ export default DS.Model.extend({
   updated_at: DS.attr(),
   inCart: false,
 
+
   startDate: function(){
 
     var events = this.get('events').toArray();
