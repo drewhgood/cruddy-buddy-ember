@@ -238,6 +238,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
   margin-top: 30px;
 }
 
+.profile h3 {
+  color: #33c6dc;
+  text-transform: uppercase;
+  font-weight: 200;
+  margin-top: 20px;
+  font-size: 15pt;
+}
 .team-container {
   background-color: #ffffff;
   margin-top: 0px;
