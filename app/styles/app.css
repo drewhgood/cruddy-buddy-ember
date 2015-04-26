@@ -202,3 +202,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', e
 
 .navbar-right~.navbar-right {
   margin-right: 30px;
+}
+
+.navbar-default .navbar-brand {
+  color: #33c6dc;
+  }
