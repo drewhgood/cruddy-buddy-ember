@@ -289,3 +289,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
   margin: 50px;
   text-transform: uppercase;
 }
+
+.course-profile {
+  background-color: #e6e9ee;
+}
+
+.course-box {
+  box-shadow: 0px -2px 0px #cbd0da;
+  background-color: #fff;
+}
+
+.course-main {
+  padding: 20px;
+}
+
+.course-main h2 {
+  text-transform: uppercase;
+  color: #33c6dc;
+}
+
+.course-main h4 {
+  font-weight: 200;
+  }
