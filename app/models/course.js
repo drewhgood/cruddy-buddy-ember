@@ -56,7 +56,4 @@ export default DS.Model.extend({
     return cap <= filled;
   }.property('spotsFilled.@each', 'capacity.@each'),
 
-
-
-
 });

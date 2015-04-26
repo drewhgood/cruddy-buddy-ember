@@ -5003,6 +5003,21 @@ body.skin-3 {
 }
 /*custome styles*/
 
+#cart {
+  position:fixed;
+  bottom:0;
+  left:0;
+  background-color: #3E4359;
+  height:250px;
+  width:100%;
+  margin-left: 0px;
+  display: none;
+}
+
+#cartClass{
+  margin-top: 60px;
+}
+
 #special {
   margin-bottom: 50px;
 }
@@ -5018,6 +5033,24 @@ body.skin-3 {
 
 .navy-bg {
   background-color: #2F4050;
+}
+
+.closeContact {
+  position: relative;
+  top: -11px;
+  right: -202px;
+}
+
+.closeContact:hover{
+  color:rgb(214, 157, 157);
+  cursor: pointer;
+}
+
+#cart h2{
+  color: white;
+  position: absolute;
+  top: -46px;
+  margin-left: 15px;
 }
 
 @media (min-width: 768px){
