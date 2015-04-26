@@ -6,6 +6,8 @@ export default DS.Model.extend({
   employee: DS.belongsTo('employee', {async: true}),
   start_time: DS.attr('date'),
   duration: DS.attr('number'),
+  created_at: DS.attr(),
+  updated_at: DS.attr(),
 
   displayStartDate: function(){
     var startTime = new Date(this.get('start_time'));

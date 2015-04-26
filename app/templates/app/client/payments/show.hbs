@@ -1,0 +1,76 @@
+<div class="row">
+<div class="col-lg-12">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="ibox-content p-xl">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h5>From:</h5>
+                        <address>
+                            <strong>Splashers, Inc.</strong><br>
+                            106 Jorg Avenu, 600/10<br>
+                            Vancouver, VT 32456<br>
+                            <abbr title="Phone">P:</abbr> (778) 601-4590
+                        </address>
+                    </div>
+
+                    <div class="col-sm-6 text-right">
+                        <h4>Invoice No.</h4>
+                        <h4 class="text-navy">{{model.payment.id}}</h4>
+                        <span>To:</span>
+                        <address>
+                            <strong>{{model.payment.registration.client.fullName}}</strong><br>
+                            {{model.payment.registration.client.a_number}} ,{{model.payment.registration.client.a_street}} <br>
+                            {{model.payment.registration.client.a_city}}, {{model.payment.registration.client.a_postal}}<br>
+                            <abbr title="Phone">P:</abbr> {{model.payment.registration.client.phone}}
+                        </address>
+                        <p>
+                            <span><strong>Invoice Date:</strong> {{model.payment.invoice_date}}</span><br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="table-responsive m-t">
+                    <table class="table invoice-table">
+                        <thead>
+                        <tr>
+                            <th>Item List</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Tax</th>
+                            <th>Total Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><div><strong>{{model.payment.registration.course.name}}</strong></div>
+                                <small>{{model.payment.registration.course.category.description}}.</small></td>
+                            <td>1</td>
+                            <td>${{model.payment.subTotal}}</td>
+                            <td>${{model.payment.tax}}</td>
+                            <td>${{model.payment.total}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div><!-- /table-responsive -->
+
+                <table class="table invoice-total">
+                    <tbody>
+                    <tr>
+                        <td><strong>Sub Total :</strong></td>
+                        <td>${{model.payment.subTotal}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TAX :</strong></td>
+                        <td>${{model.payment.tax}}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TOTAL :</strong></td>
+                        <td>${{model.payment.total}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+    </div>
+</div>
+</div>

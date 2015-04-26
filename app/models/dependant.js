@@ -12,6 +12,8 @@ export default DS.Model.extend({
   created_at: DS.attr(),
   updated_at: DS.attr(),
   notes: DS.attr(),
+  created_at: DS.attr(),
+  updated_at: DS.attr(),
   
   fullName: function() {
     return this.get('first_name') + ' ' + this.get('last_name');
