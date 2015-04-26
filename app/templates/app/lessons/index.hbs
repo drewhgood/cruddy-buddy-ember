@@ -10,7 +10,15 @@
           <div class="lesson-box-description">{{course.name}}</div>
           <div class="lesson-date-span">{{course.startDate}} - {{course.endDate}}</div>
           <br>
-          <div class="lesson-price">${{course.session_cost}}</div>
+          <div class="lesson-price">${{course.session_cost}} / class</div><br>
+           <div class="lesson-price">{{course.inCart}}</div>
+           {{#if course.inCart}}
+              <button {{action "removeFromCart" course bubbles=false class="btn btn-primary"}}>remove from cart</button>
+           {{else}}
+              <button {{action "addToCart" course bubbles=false class="btn btn-primary"}}>add to cart</button>
+           {{/if}}
+           <div{{action "test"}}>test</div>
+           {{controller.count}}
         </div>
       </div>
       {{/link-to}}
@@ -19,6 +27,26 @@
   </div>
 </div>
 
-<button {{action "show" class="btn btn-primary"}}>show</button>
-<button {{action "hide" class="btn btn-primary"}}>hide</button>
+<div id="cart" class="row">
+  <h2>Your Courses</h2>
 
+      {{#each course in model.courses}}
+        {{#if course.inCart}}
+    <div id="cartClass" class="col-lg-2">
+        <div class="contact-box">
+        <div class="closeContact cart" {{action "removeFromCart" course bubbles=false}}>X</div>
+            <div class="col-sm-4 cart">
+                <div class="text-center">
+                  <span class="fa fa-support fa-5x"></span>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <h3><strong>{{course.name}}</strong></h3>
+                <p> Start Date: {{course.startDate}} </p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    {{/if}}
+    {{/each}}
+  </div>
