@@ -179,4 +179,9 @@
   color:#33c6dc;
   font-weight: 200;
   text-transform: uppercase;
+}
+
+.contact-box {
+  min-height: 200px;
+}
 
