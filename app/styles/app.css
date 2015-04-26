@@ -292,6 +292,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
 
 .course-profile {
   background-color: #e6e9ee;
+  margin-top: 70px;
 }
 
 .course-box {
@@ -301,6 +302,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
 
 .course-main {
   padding: 20px;
+  height: 400px;
+  font-weight: 200;
 }
 
 .course-main h2 {
@@ -308,6 +311,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
   color: #33c6dc;
 }
 
-.course-main h4 {
+.course-main h4, h3 {
   font-weight: 200;
   }
+
+.course-table p {
+  height: 12px;
+}
+.course-table th {
+padding-right: 8px;
+}
