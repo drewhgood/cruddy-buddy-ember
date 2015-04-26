@@ -5003,6 +5003,10 @@ body.skin-3 {
 }
 /*custome styles*/
 
+#special {
+  margin-bottom: 50px;
+}
+
 #default_profile{
   height:150px;
   width:150px;

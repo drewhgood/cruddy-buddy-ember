@@ -1,0 +1,67 @@
+<div id="wrapper profile" class="show">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="nav-header">
+                    <div class="dropdown profile-element"> <span></span>
+                    <img alt="image" class="img-circle avatar" src="/assets/images/avatar.png">
+                            
+                            <span class="clear profile-name">David Williams
+                             </span>
+{{!--                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+ --}}                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li>
+                <li class="active">
+                    {{#link-to 'app.client.lessons'}}
+                        <a href="#">
+                        <i class="fa fa-diamond"></i> <span class="nav-label">Lessons</span></a>
+                    {{/link-to}}
+                </li>
+                <li>
+                    {{#link-to 'app.client.calendar'}}
+                        <a href="#">
+                        <i class="fa fa-calendar"></i> <span class="nav-label">Calendar</span></a>
+                    {{/link-to}}
+                </li>
+                <li>
+                    {{#link-to 'app.client.payments'}}
+                        <a href="#">
+                        <i class="fa fa-book"></i> <span class="nav-label">Invoices</span></a>
+                    {{/link-to}}
+                </li>
+                <li>
+                    {{#link-to 'app.client.payments'}}
+                        <a href="#">
+                        <i class="fa fa-user"></i> <span class="nav-label">Account</span></a>
+                    {{/link-to}}
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                <div class="col-lg-12">
+                    {{outlet}}
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="pull-right">
+                Be awesome.
+            </div>
+            <div>
+                <strong>Copyright</strong> Splashers &copy; 2015
+            </div>
+        </div>
+
+    </div>
+</div>
