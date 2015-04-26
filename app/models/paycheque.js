@@ -8,5 +8,7 @@ export default DS.Model.extend({
   is_paid: DS.attr(),
   payment_method: DS.attr(),
   payment_date: DS.attr(),
+  created_at: DS.attr(),
+  updated_at: DS.attr(),
 
 });

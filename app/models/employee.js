@@ -23,6 +23,8 @@ export default DS.Model.extend({
   password_digest: DS.attr(),
   certification: DS.attr(),
   hourly_rate: DS.attr(),
+  created_at: DS.attr(),
+  updated_at: DS.attr(),
 
   
   fullName: function() {

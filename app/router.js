@@ -20,7 +20,9 @@ export default Router.map(function() {
           this.route('show');
         });
         this.route('account');
-        this.route('payments');         
+        this.route('payments', function(){
+          this.route('show', { path: '/:id' });
+        });         
       });
   });
 

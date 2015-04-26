@@ -7,5 +7,7 @@ export default DS.Model.extend({
   privileges2: DS.attr(),
   privileges3: DS.attr(),
   privileges4: DS.attr(),
+  created_at: DS.attr(),
+  updated_at: DS.attr(),
 
 });
