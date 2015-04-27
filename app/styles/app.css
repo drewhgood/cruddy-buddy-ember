@@ -1,11 +1,37 @@
 .jumbotron-gruddy {
+    background: background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+;
   background-image: url('/assets/images/swim-jumbo.jpg');
+
   background-size: cover;
   height: 750px;
   margin-top: 30px;
   margin-bottom: 0px;
   border-radius: 0px;
 
+}
+
+.jumbotron-team {
+background: rgb(169,231,249); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(169,231,249,1) 0%, rgba(83,203,241,1) 53%, rgba(2,193,219,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(169,231,249,1)), color-stop(53%,rgba(83,203,241,1)), color-stop(100%,rgba(2,193,219,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(-45deg,  rgba(169,231,249,1) 0%,rgba(83,203,241,1) 53%,rgba(2,193,219,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(-45deg,  rgba(169,231,249,1) 0%,rgba(83,203,241,1) 53%,rgba(2,193,219,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(-45deg,  rgba(169,231,249,1) 0%,rgba(83,203,241,1) 53%,rgba(2,193,219,1) 100%); /* IE10+ */
+background: linear-gradient(135deg,  rgba(169,231,249,1) 0%,rgba(83,203,241,1) 53%,rgba(2,193,219,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', endColorstr='#02c1db',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  background-size: cover;
+  height: 450px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  border-radius: 0px;
 }
 
 .navbar-brand-cruddy {
@@ -38,14 +64,18 @@
 }
 
 
-.lesson-box {
+.lesson-box, .contact-box {
   background-color: #ffffff;
 /*  width: 100px;*/
   padding: 20px;
   box-shadow: 0px -2px 0px #cbd0da;
 }
 
-#lessons-container, #register-container {
+.lesson-box {
+  margin-bottom: 15px;
+}
+
+.lessons-container, #register-container {
 /*  background-color: #f6f7fc;*/
   width: 960px;
   margin: 0 auto;
@@ -114,7 +144,7 @@
 
 .teal-div-container h1 {
   color: #fff;
-  text-align: left;
+/*  text-align: left;*/
   font-family: Raleway;
 }
 
@@ -171,4 +201,218 @@
   margin-top: 10px;
 }
 
-.bg-box 
+#side-menu a {
+  color: #fff;
+}
+
+.contact-box h3 {
+  color:#33c6dc;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.contact-box {
+  min-height: 200px;
+}
+
+#classes {
+  width: 100%;
+  height: 100%;
+  background-color: #f6f7fc;
+}
+
+.navbar-right~.navbar-right {
+  margin-right: 30px;
+}
+
+.navbar-default .navbar-brand {
+  color: #33c6dc;
+}
+
+.portrait img {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  display: table;
+  margin: 0 auto;
+}
+
+.profile {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.profile h3 {
+  color: #33c6dc;
+  text-transform: uppercase;
+  font-weight: 200;
+  margin-top: 20px;
+  font-size: 15pt;
+}
+.team-container {
+  background-color: #ffffff;
+  margin-top: 0px;
+  padding-top: 60px;
+  height: 520px;
+}
+
+.team {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.stack img {
+  height: 150px;
+  width: auto;
+  display: table;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.stack-container {
+  background-color: #f6f7fc;
+  margin-top: 0px;
+  padding-top: 40px;
+  height: 570px;
+}
+
+.stack-container h2 {
+  margin-top: 40px;
+}
+
+.lessons-bg {
+  background-color: #e6e9ee;
+}
+
+.lessons-bg h2 {
+  text-align: center;
+  margin: 50px;
+  text-transform: uppercase;
+}
+
+.course-profile {
+  background-color: #e6e9ee;
+  margin-top: 70px;
+}
+
+.course-box {
+  box-shadow: 0px -2px 0px #cbd0da;
+  background-color: #fff;
+}
+
+.course-main {
+  padding: 20px;
+  height: 400px;
+  font-weight: 200;
+}
+
+.course-main h2 {
+  text-transform: uppercase;
+  color: #33c6dc;
+}
+
+.course-main h4, h3 {
+  font-weight: 200;
+  }
+
+.course-table p {
+  height: 12px;
+}
+.course-table th {
+padding-right: 8px;
+}
+
+.sidebar-collapse {
+  background-color: #33c6dc;
+}
+
+.profile-main {
+  padding: 20px;
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+
+.profile-main h2 {
+  text-transform: uppercase;
+  color: #33c6dc;
+}
+
+.cart-box {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+.cart-box h3 {
+  color: #fff;
+
+}
+
+
+#cart {
+  position:fixed;
+  bottom:0;
+  left:0;
+  background: rgba(67,74,85,0.95);
+  height:250px;
+  width:100%;
+  margin-left: 0px;
+  display: none;
+  
+}
+
+#cartClass{
+  margin-top: 60px;
+}
+
+#special {
+  margin-bottom: 50px;
+}
+
+#default_profile{
+
+}
+
+#profile .col-lg-4{
+  position:fixed;
+}
+
+.navy-bg {
+  background-color: #2F4050;
+}
+
+.closeContact {
+  position: static !important;
+  text-align: right;
+}
+
+.closeContact:hover{
+  color:rgb(214, 157, 157);
+  cursor: pointer;
+}
+
+#cart h2{
+  color: white;
+  position: absolute;
+  top: -46px;
+  margin-left: 15px;
+}
+
+.cart{
+  position:relative;
+}
+
+@media (min-width: 768px){
+
+.form-horizontal .control-label {
+  text-align: left;
+  padding-bottom: 4px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .col-sm-4.cart {
+    display:none;
+  }
+
+  

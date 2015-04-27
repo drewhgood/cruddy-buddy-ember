@@ -1,7 +1,8 @@
-
+<div class="lessons-bg">
 <div class="row" >
   <div id="lessons-container" class="container">
     <div class="row">
+    <h2>Browse our lessons</h2>
       {{#each course in model.courses}}
       {{#link-to 'app.lessons.show' course.id tagName='div'}}  
       <div class="col-sm-4" style="padding-top: 15px">
@@ -13,9 +14,9 @@
           <div class="lesson-price">${{course.session_cost}} / class</div><br>
            <div class="lesson-price">{{course.inCart}}</div>
            {{#if course.inCart}}
-              <button {{action "removeFromCart" course bubbles=false class="btn btn-primary"}}>remove from cart</button>
+              <a class="btn btn-default" {{action "removeFromCart" course bubbles=false class="btn btn-default"}}>remove from cart</a>
            {{else}}
-              <button {{action "addToCart" course bubbles=false class="btn btn-primary"}}>add to cart</button>
+              <a class="btn btn-default" {{action "addToCart" course bubbles=false class="btn btn-default"}}>add to cart</a>
            {{/if}}
 
         </div>
@@ -29,10 +30,15 @@
 <div id="cart" class="row">
   <h2>Your Courses</h2>
 
+
+<button {{action "show" class="btn btn-primary"}}>show</button>
+<button {{action "hide" class="btn btn-primary"}}>hide</button>
+
+
       {{#each course in model.courses}}
         {{#if course.inCart}}
     <div id="cartClass" class="col-lg-2">
-        <div class="contact-box">
+        <div class="cart-box">
         <div class="closeContact cart" {{action "removeFromCart" course bubbles=false}}>X</div>
             <div class="col-sm-4 cart">
                 <div class="text-center">
@@ -41,7 +47,7 @@
             </div>
             <div class="col-sm-8">
                 <h3><strong>{{course.name}}</strong></h3>
-                <p> Start Date: {{course.startDate}} </p>
+  {{!--               <p> Start Date: {{course.startDate}} </p> --}}
             </div>
             <div class="clearfix"></div>
         </div>
@@ -52,3 +58,4 @@
     <button {{action "test"}}>checkout</button>
     {{controller.properties.checkingOut}}
   </div>
+</div>

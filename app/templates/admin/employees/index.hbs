@@ -1,3 +1,10 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-8">
+      <h2>Employees</h2>
+  </div>
+</div>
+
+
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
         {{#each emp in model.employee}}
@@ -11,10 +18,10 @@
                                 </div>
                             </div>
                             <div class="col-sm-8">
-                                <h3><strong>{{emp.fullName}}</strong></h3>
+                                <h3>{{emp.fullName}}</h3>
                                 <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
                                 <address>
-                                    <strong>{{emp.address}}</strong><br>
+                                    {{emp.address}}<br>
                                     
                                     <abbr title="Phone">P:</abbr> {{emp.phone}}
                                 </address>
