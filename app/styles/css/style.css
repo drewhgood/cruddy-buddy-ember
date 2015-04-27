@@ -5012,6 +5012,7 @@ body.skin-3 {
   width:100%;
   margin-left: 0px;
   display: none;
+  
 }
 
 #cartClass{
@@ -5035,7 +5036,7 @@ body.skin-3 {
 }
 
 .closeContact {
-    position: static !important;
+  position: static !important;
   text-align: right;
 }
 
