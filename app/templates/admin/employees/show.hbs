@@ -1,166 +1,118 @@
 <div class="wrapper wrapper-content  animated fadeInRight">
-            <div class="row">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="course-box">
+                <h2>{{model.employee.first_name}} {{model.employee.last_name}}</h2>
+                <p>{{model.employee.birthday}}</p>
+                <img src="assets/images/avatar-m.png" id="default_profile" class="img-circle circle-border m-b-md" alt="profile">
 
-
-                <div class="col-lg-4" id="profile">
-                        <div class="widget-head-color-box navy-bg p-lg text-center">
-                            <div class="m-b-md">
-                            <h2 class="font-bold no-margins">
-                               {{model.employee.first_name}} {{model.employee.last_name}}
-                            </h2>
-                                <small>{{model.employee.birthday}}</small>
-                            </div>
-                            <img src="assets/images/avatar-m.png" id="default_profile" class="img-circle circle-border m-b-md" alt="profile">
-
-                            <ul class="list-unstyled m-t-md">
-                            {{#if model.employee.email}}
-                            <li>
-                                <span class="fa fa-envelope m-r-xs"></span>
-                                <label>Email:</label>
-                                {{model.employee.email}}
-                            </li>
-                            {{/if}}
-                            {{#if model.employee.a_number}}
-                            <li>
-                                <span class="fa fa-home m-r-xs"></span>
-                                <label>Address:</label>
-                                {{#if model.employee.a_unit}}#{{model.employee.a_unit}}-{{/if}}{{model.employee.a_number}}, {{a_street}}
-                                {{#if model.employee.a_city}}<br> {{model.employee.a_city}}, B.C. {{/if}} - {{model.employee.a_postal}}
-                            </li>
-                            {{/if}}
-                            {{#if model.employee.phone}}
-                            <li>
-                                <span class="fa fa-phone m-r-xs"></span>
-                                <label>Contact:</label>
-                                {{model.employee.phone}}
-                                {{#if model.employee.phone_alternate}}
-                                  <br><span class="fa fa-phone m-r-xs"></span>
-                                  <label>Alternate:</label>{{model.employee.phone_alternate}}
-                                {{/if}}
-                            </li>
-                            {{/if}}
-                        </ul>
-                        </div>
-                        {{#if model.employee.notes}}
-                        <div class="widget-text-box">
-                            <h4 class="media-heading">Notes:</h4>
-                            <p>{{model.employee.notes}}</p>
-                        </div>
+                <ul class="list-unstyled m-t-md">
+                    {{#if model.employee.email}}
+                    <li>
+                        <span class="fa fa-envelope m-r-xs"></span>
+                        <label>Email:</label>
+                        {{model.employee.email}}
+                    </li>
+                    {{/if}}
+                    {{#if model.employee.a_number}}
+                    <li>
+                        <span class="fa fa-home m-r-xs"></span>
+                        <label>Address:</label>
+                        {{#if model.employee.a_unit}}#{{model.employee.a_unit}}-{{/if}}{{model.employee.a_number}}, {{a_street}}
+                        {{#if model.employee.a_city}}<br> {{model.employee.a_city}}, B.C. {{/if}} - {{model.employee.a_postal}}
+                    </li>
+                    {{/if}}
+                    {{#if model.employee.phone}}
+                    <li>
+                        <span class="fa fa-phone m-r-xs"></span>
+                        <label>Contact:</label>
+                        {{model.employee.phone}}
+                        {{#if model.employee.phone_alternate}}
+                          <br><span class="fa fa-phone m-r-xs"></span>
+                          <label>Alternate:</label>{{model.employee.phone_alternate}}
                         {{/if}}
+                    </li>
+                    {{/if}}
+                </ul>
+
                 </div>
-
-                <div class="col-lg-4">
-                    <div class="widget style1 navy-bg">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <i class="fa fa-dollar fa-5x"></i>
-                            </div>
-                            <div class="col-xs-8 text-right">
-                                <span> Earned Income This Period </span>
-                                <h2 class="font-bold">$325</h2>
-                            </div>
-                        </div>
-                    </div>
+                {{#if model.employee.notes}}
+                <div class="widget-text-box">
+                    <h4 class="media-heading">Notes:</h4>
+                    <p>{{model.employee.notes}}</p>
                 </div>
-
-                <div class="col-lg-4">
-                <div class="widget style1 navy-bg">
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <i class="fa fa-support fa-5x"></i>
-                        </div>
-                        <div class="col-xs-8 text-right">
-                            <span> Total Lessons </span>
-                            <h2 class="font-bold">{{model.employee.first_name}}</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                <div class="col-lg-8">
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <h3>{{model.employee.first_name}}'s Lessons</h3>
-                        </div>
-                        <div class="ibox-content">
-                            <div class="row">
-                                <div class="col-sm-5 m-b-xs"><select class="input-sm form-control input-s-sm inline">
-                                    <option value="0">Option 1</option>
-                                    <option value="1">Option 2</option>
-                                    <option value="2">Option 3</option>
-                                    <option value="3">Option 4</option>
-                                </select>
-                                </div>
-                                <div class="col-sm-4 m-b-xs">
-                                    <div data-toggle="buttons" class="btn-group">
-                                        <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> Day </label>
-                                        <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> Week </label>
-                                        <label class="btn btn-sm btn-white"> <input type="radio" id="option3" name="options"> Month </label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="input-group"><input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
-                                        <button type="button" class="btn btn-sm btn-primary"> Go!</button> </span></div>
-                                </div>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
-                                    <tr>
-
-                                        <th></th>
-                                        <th>Name</th>
-                                        <th>Start - End</th>
-                                        <th>Course Duration</th>
-                                        <th>Capacity</th>
-                                        <th>Full</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    {{#each ev in model.employee.events}}
-                                    <tr>
-                                        <td><div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" checked="" class="i-checks" name="input[]" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div></td>
-
-                                        <td><small>{{ev.course.name}}</small></td>
-
-                                        <td>
-                                            {{#link-to 'admin.courses.show' ev.course.id}}{{course.name}}{{/link-to}}
-                                        </td>
-                                         <td>{{ev.duration}}h</td>
-
-                                        <td>0/{{ev.course.capacity}}</td>
-                                        <td></td>
-
-                                        <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
-                                    </tr>
-
-                                   {{/each}}                                
-                                    
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>
-                    </div>
-              
-
-            </div>
-
-                <!-- <div class="col-lg-6">
-                    <div class="widget navy-bg no-padding">
-                        <div class="p-m">
-                            <h1 class="m-xs">$ 1,540</h1>
-                            <h3 class="font-bold no-margins">
-                                Annual income
-                            </h3>
-                            <small>Income form project Alpha.</small>
-                        </div>
-                        <div class="flot-chart">
-                            <div class="flot-chart-content" id="flot-chart1" style="padding: 0px; position: relative;"><canvas class="flot-base" width="511" height="89" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 568px; height: 100px;"></canvas><canvas class="flot-overlay" width="511" height="89" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 568px; height: 100px;"></canvas></div>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-
+                {{/if}}
 
         </div>
+    </div>
+     <div class="row">
+        <div class="col-sm-12">
+            <div class="course-box">
+                <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h3>{{model.employee.first_name}}'s Lessons</h3>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-sm-5 m-b-xs"><select class="input-sm form-control input-s-sm inline">
+                            <option value="0">Option 1</option>
+                            <option value="1">Option 2</option>
+                            <option value="2">Option 3</option>
+                            <option value="3">Option 4</option>
+                        </select>
+                        </div>
+                        <div class="col-sm-4 m-b-xs">
+                            <div data-toggle="buttons" class="btn-group">
+                                <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> Day </label>
+                                <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> Week </label>
+                                <label class="btn btn-sm btn-white"> <input type="radio" id="option3" name="options"> Month </label>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="input-group"><input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
+                                <button type="button" class="btn btn-sm btn-primary"> Go!</button> </span></div>
+                        </div>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+
+                                <th></th>
+                                <th>Name</th>
+                                <th>Start - End</th>
+                                <th>Course Duration</th>
+                                <th>Capacity</th>
+                                <th>Full</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each ev in model.employee.events}}
+                            <tr>
+                                <td><div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" checked="" class="i-checks" name="input[]" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div></td>
+
+                                <td><small>{{ev.course.name}}</small></td>
+
+                                <td>
+                                    {{#link-to 'admin.courses.show' ev.course.id}}{{course.name}}{{/link-to}}
+                                </td>
+                                 <td>{{ev.duration}}h</td>
+
+                                <td>0/{{ev.course.capacity}}</td>
+                                <td></td>
+
+                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                            </tr>
+
+                           {{/each}}                                
+                            
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

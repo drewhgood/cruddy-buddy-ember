@@ -321,3 +321,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
 .course-table th {
 padding-right: 8px;
 }
+
+.sidebar-collapse {
+  background-color: #33c6dc;
+}
