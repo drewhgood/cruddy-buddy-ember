@@ -41,7 +41,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
 }
 
 
-.jumbotron-gruddy, .jumbotron-team h1 {
+.jumbotron-gruddy h1 {
   font-family: Raleway;
   font-weight: 400;
   color: white;
@@ -69,6 +69,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
 /*  width: 100px;*/
   padding: 20px;
   box-shadow: 0px -2px 0px #cbd0da;
+}
+
+.lesson-box {
+  margin-bottom: 15px;
 }
 
 .lessons-container, #register-container {
@@ -275,3 +279,130 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
 .stack-container h2 {
   margin-top: 40px;
 }
+
+.lessons-bg {
+  background-color: #e6e9ee;
+}
+
+.lessons-bg h2 {
+  text-align: center;
+  margin: 50px;
+  text-transform: uppercase;
+}
+
+.course-profile {
+  background-color: #e6e9ee;
+  margin-top: 70px;
+}
+
+.course-box {
+  box-shadow: 0px -2px 0px #cbd0da;
+  background-color: #fff;
+}
+
+.course-main {
+  padding: 20px;
+  height: 400px;
+  font-weight: 200;
+}
+
+.course-main h2 {
+  text-transform: uppercase;
+  color: #33c6dc;
+}
+
+.course-main h4, h3 {
+  font-weight: 200;
+  }
+
+.course-table p {
+  height: 12px;
+}
+.course-table th {
+padding-right: 8px;
+}
+
+.sidebar-collapse {
+  background-color: #33c6dc;
+}
+
+.profile-main {
+  padding: 20px;
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+
+.profile-main h2 {
+  text-transform: uppercase;
+  color: #33c6dc;
+}
+
+
+
+#cart {
+  position:fixed;
+  bottom:0;
+  left:0;
+  background-color: #3E4359;
+  height:250px;
+  width:100%;
+  margin-left: 0px;
+  display: none;
+  
+}
+
+#cartClass{
+  margin-top: 60px;
+}
+
+#special {
+  margin-bottom: 50px;
+}
+
+#default_profile{
+
+}
+
+#profile .col-lg-4{
+  position:fixed;
+}
+
+.navy-bg {
+  background-color: #2F4050;
+}
+
+.closeContact {
+  position: static !important;
+  text-align: right;
+}
+
+.closeContact:hover{
+  color:rgb(214, 157, 157);
+  cursor: pointer;
+}
+
+#cart h2{
+  color: white;
+  position: absolute;
+  top: -46px;
+  margin-left: 15px;
+}
+
+.cart{
+  position:relative;
+}
+
+@media (min-width: 768px){
+
+.form-horizontal .control-label {
+  text-align: left;
+  padding-bottom: 4px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .col-sm-4.cart {
+    display:none;
+  }
+
+  

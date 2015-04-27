@@ -1,7 +1,8 @@
-
+<div class="lessons-bg">
 <div class="row" >
   <div id="lessons-container" class="container">
     <div class="row">
+    <h2>Browse our lessons</h2>
       {{#each course in model.courses}}
       {{#link-to 'app.lessons.show' course.id tagName='div'}}  
       <div class="col-sm-4" style="padding-top: 15px">
@@ -26,8 +27,14 @@
   </div>
 </div>
 
+
 <div id="cart" class="row">
   <h2>Your Courses</h2>
+
+</div>
+<button {{action "show" class="btn btn-primary"}}>show</button>
+<button {{action "hide" class="btn btn-primary"}}>hide</button>
+
 
       {{#each course in model.courses}}
         {{#if course.inCart}}
