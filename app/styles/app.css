@@ -337,13 +337,17 @@ padding-right: 8px;
   color: #33c6dc;
 }
 
+.cart-box {
+  
+}
+
 
 
 #cart {
   position:fixed;
   bottom:0;
   left:0;
-  background-color: #3E4359;
+  background: rgba(67,74,85,0.95);
   height:250px;
   width:100%;
   margin-left: 0px;
