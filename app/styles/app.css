@@ -348,6 +348,26 @@ padding-right: 8px;
 
 }
 
+.profile-box {
+  color: #646d78;
+  font-weight: 200;
+  text-align: center;
+}
+
+.profile-box h2 {
+  color: #33c6dc;
+  text-transform: uppercase;
+}
+
+.profile-img {
+  display: table;
+  margin: 0 auto;
+}
+
+
+
+
+
 
 #cart {
   position:fixed;
