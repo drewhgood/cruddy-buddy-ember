@@ -22,6 +22,7 @@
                     {{ input valueBinding="model.last_name" class="form-control" placeholder='Last Name'}}</div>
                 </div>
 
+
                 <div class="form-group">
                  <label class="col-sm-2 control-label">Birthday</label>
 
@@ -29,17 +30,19 @@
                     {{date-picker date=mydate valueFormat='YYYY-MM-DD' valueBinding="model.birthday"}}</div>
                 </div>
 
-                <div class="hr-line-dashed"></div>
-                
+                 <div class="form-group">
+                 <label class="col-sm-2 control-label">Gender</label>
+                    <div class="col-sm-12">
+                   
+                    {{view "select" content=names valueBinding="model.gender"  class="col-sm-12" }}
+                    </div>
+                </div>
 
                 <div class="form-group">
 
                     <div class="col-sm-12">                                    
                     {{input valueBinding="model.email" class="form-control" placeholder='Email'}}</div>
                 </div>
-
-                <div class="hr-line-dashed"></div>
-
 
                 <div class="form-group">
 
@@ -54,19 +57,6 @@
                     </div>
                 </div>
 
-                <div class="hr-line-dashed"></div>
-
-
-
-                <div class="form-group">
-
-                    <div class="col-sm-12">
-                   
-                    {{view "select" content=names valueBinding="model.gender"  class="col-sm-12" }}
-                    </div>
-                </div>
-
-                <div class="hr-line-dashed"></div>
 
                 <label class="col-sm-2 control-label">Address</label>
                  <div class="form-group">
@@ -98,7 +88,6 @@
                     </div>
                 </div>
 
-                <div class="hr-line-dashed"></div>
 
                 <div class="form-group">
                     <div class="col-sm-12">                                    
@@ -114,8 +103,8 @@
 -->
 
                 <div class="form-group">
-                    <div class="col-sm-12 col-sm-offset-1">
-                        <button {{action 'createClient' class="btn btn-primary"}}>Create Client</button>
+                    <div class="col-sm-12">
+                        <a class="btn btn-default" {{action 'createClient' class="btn btn-default"}}>Create Client</a>
                         
                     </div>
                 </div>
@@ -127,7 +116,7 @@
 
 
 <div class="col-lg-4" id="profile">
-        <div class="widget-head-color-box navy-bg p-lg text-center">
+        <div class="ibox-content">
             <div class="m-b-md">
             <h2 class="font-bold no-margins">
                {{model.first_name}} {{model.last_name}}
