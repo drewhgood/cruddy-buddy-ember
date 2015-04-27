@@ -17,7 +17,7 @@
            {{else}}
               <button {{action "addToCart" course bubbles=false class="btn btn-primary"}}>add to cart</button>
            {{/if}}
-          
+
         </div>
       </div>
       {{/link-to}}
@@ -48,4 +48,7 @@
     </div>
     {{/if}}
     {{/each}}
+
+    <button {{action "test"}}>checkout</button>
+    {{controller.properties.checkingOut}}
   </div>

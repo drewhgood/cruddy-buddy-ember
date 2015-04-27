@@ -5012,7 +5012,7 @@ body.skin-3 {
   width:100%;
   margin-left: 0px;
   display: none;
-  
+  transition: height 2s; 
 }
 
 #cartClass{
