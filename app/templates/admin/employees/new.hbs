@@ -19,22 +19,25 @@
                     <div class="col-sm-12">                                    {{input valueBinding="model.last_name" class="form-control" placeholder='Last Name'}}</div>
                 </div>
 
-                <div class="hr-line-dashed"></div>
-
                 <div class="form-group">
+                 <label class="col-sm-2 control-label">Birthday</label>
 
-                    <div class="col-sm-12">                                    {{input valueBinding="model.birthday" class="form-control" placeholder='Birthday'}}</div>
+                    <div class="col-sm-12">                                   
+                    {{date-picker date=mydate valueFormat='YYYY-MM-DD' valueBinding="model.birthday"}}</div>
                 </div>
-
-                <div class="hr-line-dashed"></div>
                 
 
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Gender</label>
+                    <div class="col-sm-12">
+                        {{view "select" content=names valueBinding="model.gender"  class="col-sm-12" }}
+                    </div>
+                </div>
+            
                 <div class="form-group">
 
                     <div class="col-sm-12">                                    {{input valueBinding="model.email" class="form-control" placeholder='Email'}}</div>
                 </div>
-
-                <div class="hr-line-dashed"></div>
 
 
                 <div class="form-group">
@@ -47,18 +50,6 @@
                     <div class="col-sm-12">                                    {{input valueBinding="model.phone_alternate" class="form-control" placeholder='Alternate Phone'}}</div>
                 </div>
 
-                <div class="hr-line-dashed"></div>
-
-
-
-                <div class="form-group">
-
-                    <div class="col-sm-12">
-                        {{view "select" content=names valueBinding="model.gender"  class="col-sm-12" }}
-                    </div>
-                </div>
-
-                <div class="hr-line-dashed"></div>
 
                 <label class="col-sm-2 control-label">Address</label>
                  <div class="form-group">
