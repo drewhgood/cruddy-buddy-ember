@@ -42,9 +42,8 @@ export default DS.Model.extend({
     }
     return age;
 
-  }.property('birthday.@each')
-
-
+  }.property('birthday.@each'),
+  
 });
 
 

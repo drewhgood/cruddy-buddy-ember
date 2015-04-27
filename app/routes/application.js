@@ -8,5 +8,9 @@ export default Ember.Route.extend({
     hide: function() {
       $('#cart').fadeOut(1000);
     }
-  }
+  },
+  
+    //   redirect: function () {
+    //     this.transitionTo('/home');
+    // }
 });
