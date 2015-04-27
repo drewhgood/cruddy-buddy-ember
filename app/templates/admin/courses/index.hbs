@@ -3,24 +3,12 @@
         {{#each cour in model.course}} 
             {{#link-to 'admin.courses.show' cour.id tagName='div'}}       
                     <div class="col-lg-4">
-                        <div class="cart-box">
-                            <div class="col-sm-4">
-                                <div class="text-center">
-                                    <img alt="image" class="img-circle m-t-xs img-responsive" src="assets/images/avatar-m.png">
-                                    <div class="m-t-xs font-bold">Graphics designer</div>
-                                </div>
-                            </div>
-                            <div class="col-sm-8">
-                                <h3><strong>{{cour.name}}</strong></h3>
-                                <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
-                                <address>
-                                    <strong>{{cour.capacity}}</strong><br>
-                                    <strong>${{cour.session_cost}}</strong><br>
-
-                                    
-                                    
-                                </address>
-                            </div>
+                        <div class="lesson-box">
+                                <div class="lesson-box-name">{{cour.name}}</div><br>
+                                    <p>Capacity: <strong>{{cour.capacity}}</strong></p>
+                                    <p>Session Cost: <strong>${{cour.session_cost}}</strong></p>
+                                    <p>Description:</p>
+                                    <p>Vegan fingerstache DIY, fap cred beard distillery four loko. VHS messenger bag Pitchfork McSweeney's church-key authentic</p>
                             <div class="clearfix"></div>
                         </div>
                     </div>
