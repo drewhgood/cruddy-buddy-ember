@@ -120,8 +120,7 @@
 
                 <div class="form-group">
                     <div class="col-sm-12">
-                        <a class="btn btn-default" {{action 'createEmployee' class="btn btn-primary"}}>Create Employee</a>
-                        
+                        <a class="btn btn-default" {{action 'createEmployee' class="btn btn-primary"}}>Create Employee</a>  
                     </div>
                 </div>
             </form>
@@ -132,18 +131,18 @@
 
 
 <div class="col-lg-4" id="profile">
-        <div class="widget-head-color-box navy-bg p-lg text-center">
-            <div class="m-b-md">
-            <h2 class="font-bold no-margins">
+    <div class="ibox-content profile-box">
+        <div class="m-b-md">
+            <h2>
                {{model.first_name}} {{model.last_name}}
             </h2>
             {{#if model.birthday}}
                 <small>{{model.birthday}}</small>
             {{/if}}
-            </div>
-            <img src="assets/images/avatar-m.png" id="default_profile" class="img-circle circle-border m-b-md" alt="profile">
+        </div>
+        <img src="assets/images/avatar-m.png" id="default_profile" class="img-circle circle-border m-b-md" alt="profile">
 
-            <ul class="list-unstyled m-t-md">
+        <ul class="list-unstyled m-t-md">
             {{#if model.email}}
             <li>
                 <span class="fa fa-envelope m-r-xs"></span>
@@ -171,13 +170,13 @@
             </li>
             {{/if}}
         </ul>
-        </div>
-        {{#if model.notes}}
-        <div class="widget-text-box">
-            <h4 class="media-heading">Notes:</h4>
-            <p>{{model.notes}}</p>
-        </div>
-        {{/if}}
+    </div>
+    {{#if model.notes}}
+    <div class="widget-text-box">
+        <h4 class="media-heading">Notes:</h4>
+        <p>{{model.notes}}</p>
+    </div>
+    {{/if}}
 </div>
 
 
