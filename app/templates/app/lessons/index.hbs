@@ -38,7 +38,7 @@
       {{#each course in model.courses}}
         {{#if course.inCart}}
     <div id="cartClass" class="col-lg-2">
-        <div class="contact-box">
+        <div class="cart-box">
         <div class="closeContact cart" {{action "removeFromCart" course bubbles=false}}>X</div>
             <div class="col-sm-4 cart">
                 <div class="text-center">
@@ -47,7 +47,7 @@
             </div>
             <div class="col-sm-8">
                 <h3><strong>{{course.name}}</strong></h3>
-                <p> Start Date: {{course.startDate}} </p>
+  {{!--               <p> Start Date: {{course.startDate}} </p> --}}
             </div>
             <div class="clearfix"></div>
         </div>
