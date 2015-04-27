@@ -43,10 +43,10 @@
         {{#each dep in model.client.dependants}}  
                     {{#link-to 'admin.dependants.show' dep.id tagName='div'}}       
                         <div class="row">
-                            <div class="widget style1 red-bg">
+                            <div class="">
                                 <div class="row">
                                     <div class="col-xs-3">
-                                        <i class="fa fa-child fa-4x"></i>
+                                        <i class="fa fa-plus-square-o"></i>
                                     </div>
                                     <div class="col-xs-3 text-right">
                                         <span>Age: {{dep.age}} </span>
