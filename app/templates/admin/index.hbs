@@ -1,3 +1,97 @@
 
 
-<h1>admin index</h1>
+
+{{#each dash in model.dashboards}}
+
+
+
+
+
+<div class="col-lg-3">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <!-- <span class="label label-success pull-right">Monthly</span> -->
+            <h5>Revenue</h5>
+        </div>
+        <div class="ibox-content">
+            <h1 class="no-margins">${{dash.total_revenue}}</h1>
+            <!-- <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div> -->
+            <small>Total</small>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-3">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <!-- <span class="label label-success pull-right">Monthly</span> -->
+            <h5>Number of Registration</h5>
+        </div>
+        <div class="ibox-content">
+            <h1 class="no-margins">{{dash.num_registrations}}</h1>
+            <!-- <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div> -->
+            <small>Total</small>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-3">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <!-- <span class="label label-success pull-right">Monthly</span> -->
+            <h5>Capacity/ocupation</h5>
+        </div>
+        <div class="ibox-content">
+            <h1 class="no-margins">{{dash.capacity_ratio}}</h1>
+            <!-- <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div> -->
+            <small>Ratio</small>
+        </div>
+    </div>
+</div>
+<div class="col-lg-3">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <!-- <span class="label label-success pull-right">Monthly</span> -->
+            <h5>Number of Students</h5>
+        </div>
+        <div class="ibox-content">
+            <h1 class="no-margins">{{dash.num_students}}</h1>
+            <!-- <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div> -->
+            <small>total</small>
+        </div>
+    </div>
+</div>
+
+<div class="ibox float-e-margins">
+  <div class="ibox-title">
+  <h5>Revenue/Categories</h5>
+
+  </div>
+  <div class="ibox-content">
+    <div class="row">
+      <div class="col-lg-9">
+
+        {{ember-chart type='Bar' data=dash.chart1 width=900em height=200em}}
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="ibox float-e-margins">
+  <div class="ibox-title">
+  <h5>Registrations/Month</h5>
+
+  </div>
+<div class="ibox-content">
+    <div class="row">
+      <div class="col-lg-9">
+
+        {{ember-chart type='Line' data=dash.chart2 width=900 height=200}}
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+{{/each}}
