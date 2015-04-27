@@ -22,6 +22,7 @@ export default DS.Model.extend({
   password_digest: DS.attr(),
   created_at: DS.attr(),
   updated_at: DS.attr(),
+  dependants_name: DS.attr(),
 
   fullName: function() {
     return this.get('first_name') + ' ' + this.get('last_name');
@@ -43,6 +44,19 @@ export default DS.Model.extend({
     return age;
 
   }.property('birthday.@each'),
+
+  dependants_name_display: function(){
+    var d_names = this.get('dependants_name');
+        
+        if(d_names){
+          return d_names.substring(0, d_names.length - 1);
+        }else{
+          ""
+        }
+
+    return 
+
+  }.property('dependants_name')
   
 });
 
