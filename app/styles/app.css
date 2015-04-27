@@ -362,6 +362,7 @@ padding-right: 8px;
 .profile-img {
   display: table;
   margin: 0 auto;
+  width: 80%;
 }
 
 
