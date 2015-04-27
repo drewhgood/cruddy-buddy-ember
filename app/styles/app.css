@@ -325,3 +325,14 @@ padding-right: 8px;
 .sidebar-collapse {
   background-color: #33c6dc;
 }
+
+.profile-main {
+  padding: 20px;
+  font-weight: 200;
+  margin-bottom: 40px;
+}
+
+.profile-main h2 {
+  text-transform: uppercase;
+  color: #33c6dc;
+}
