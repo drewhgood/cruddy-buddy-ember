@@ -14,9 +14,9 @@
           <div class="lesson-price">${{course.session_cost}} / class</div><br>
            <div class="lesson-price">{{course.inCart}}</div>
            {{#if course.inCart}}
-              <button {{action "removeFromCart" course bubbles=false class="btn btn-primary"}}>remove from cart</button>
+              <button {{action "removeFromCart" course bubbles=false class="btn btn-default"}}>remove from cart</button>
            {{else}}
-              <button {{action "addToCart" course bubbles=false class="btn btn-primary"}}>add to cart</button>
+              <button class="btn btn-default" {{action "addToCart" course bubbles=false class="btn btn-default"}}>add to cart</button>
            {{/if}}
           
         </div>
@@ -30,7 +30,7 @@
 <div id="cart" class="row">
   <h2>Your Courses</h2>
 
-</div>
+
 <button {{action "show" class="btn btn-primary"}}>show</button>
 <button {{action "hide" class="btn btn-primary"}}>hide</button>
 
@@ -54,4 +54,5 @@
     </div>
     {{/if}}
     {{/each}}
+    </div>
   </div>
