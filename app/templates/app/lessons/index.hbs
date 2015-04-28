@@ -12,7 +12,7 @@
           <div class="lesson-date-span">{{course.startDate}} - {{course.endDate}}</div>
           <br>
           <div class="lesson-price">${{course.session_cost}} / class</div><br>
-           <div class="lesson-price">{{course.inCart}}</div>
+           
            {{#if course.inCart}}
               <a class="btn btn-default" {{action "removeFromCart" course bubbles=false class="btn btn-default"}}>remove from cart</a>
            {{else}}

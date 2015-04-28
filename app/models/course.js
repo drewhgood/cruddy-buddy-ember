@@ -10,7 +10,7 @@ export default DS.Model.extend({
   capacity: DS.attr(),
   session_cost: DS.attr(),
   level: DS.attr(),
-  description: DS.attr(),
+  description: DS.attr('string'),
   created_at: DS.attr(),
   updated_at: DS.attr(),
   inCart: false,
@@ -18,8 +18,16 @@ export default DS.Model.extend({
 
   startDate: function(){
 
+    if(this.get('events.length')===0){
+      return "TBD"
+    }
+
     var events = this.get('events').toArray();
+
+
     var smallestDate = new Date(events[0].get('start_time'));
+
+
 
     events.forEach(function(e){  
 
@@ -30,10 +38,15 @@ export default DS.Model.extend({
       }
     });
 
+
+
     return moment(smallestDate).format('MMM Do');
   }.property('events.@each.start_time'),
 
   endDate: function(){
+    if(this.get('events.length')===0){
+      return "TBD"
+    }
 
     var events = this.get('events').toArray();
     var greaterDate = new Date(events[0].get('start_time'));
