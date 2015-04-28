@@ -39,16 +39,15 @@
                 </div>
                 <div class="col-sm-1"></div>
                 <div class="col-sm-4">
-                        <div class="row">
-                    <h2> Children </h2>
-                            {{#each dep in model.client.dependants}}  
-                                {{#link-to 'admin.dependants.show' dep.id tagName='div'}}  
-                                    <span class="fa fa-child m-r-xs"></span>
-     
-                                    <label>{{dep.first_name}}: </label> {{dep.age}} years old
-                                {{/link-to}}                               
-                            {{/each}}
-                        </div>
+                    <div class="row">
+                        <h2> Children </h2>
+                        {{#each dep in model.client.dependants}}  
+                            {{#link-to 'admin.dependants.show' dep.id tagName='div'}}  
+                                <span class="fa fa-child m-r-xs"></span>
+                                <label>{{dep.first_name}}: </label> {{dep.age}} years old
+                            {{/link-to}}                               
+                        {{/each}}
+                    </div>
                 </div>
                     {{#if model.client.notes}}
                         <h4>Notes:</h4>
@@ -123,7 +122,6 @@
                             </tbody>
                         </table>
                     </div>
-
                 </div>
             </div>
             </div>
