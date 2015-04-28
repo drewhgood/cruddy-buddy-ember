@@ -7,9 +7,9 @@
       {{#link-to 'app.lessons.show' course.id tagName='div'}}  
       <div class="col-sm-4" style="padding-top: 15px">
         <div class="lesson-box">
-          <div class="lesson-box-name">{{course.category.title}}</div>
-          <div class="lesson-box-description">{{course.name}}</div>
-          <div class="lesson-date-span">{{course.startDate}} - {{course.endDate}}</div>
+          <div class="lesson-box-name">{{course.name}}</div>
+          <div class="lesson-box-description">{{course.category.title}}</div>
+          <div class="lesson-date-span">{{course.displayStartDate}} - {{course.displayEndDate}}</div>
           <br>
           <div class="lesson-price">${{course.session_cost}} / class</div><br>
            
@@ -145,7 +145,7 @@
 
           <div id="registrationFormDependant" class="ibox-content">
               <form method="get" class="form-horizontal">
-                  <legend>Register a dependant</legend>
+                  <legend>Register a Swimmer</legend>
                   <div class="form-group">
                       <div class="col-sm-6">
                         {{input valueBinding="model.first_name" class="form-control" placeholder='First Name'  placeholder="Swimmer's First Name"}}

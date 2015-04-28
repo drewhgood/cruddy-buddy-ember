@@ -5094,6 +5094,10 @@ body.skin-3 {
   transition: padding-top 2s;
 }
 
+.form-control {
+color:black;
+}
+
 .cart{
   position:relative;
 }
