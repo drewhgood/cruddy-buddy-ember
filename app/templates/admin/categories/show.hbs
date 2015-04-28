@@ -1,7 +1,30 @@
 <div class="wrapper wrapper-content  animated fadeInRight">
-    <div class="row">
+    <div clas="row">
+        <div class="col-sm-4">
+            <div class="course-box course-main">
+                <h2>
+                   {{model.category.title}}
+                </h2>
+                {{#if model.category.description}}
+                <div>
+                    <p><strong>Description</strong></p>
+                    <p>{{model.category.description}}</p>
+                </div>
+                {{/if}}
+                <div class="col-xs-12 text-right">
+                    <span> Revenue from category </span>
+                    <h2 class="font-bold">$325</h2>
+                </div>
+                 <div class="col-xs-12 text-right">
+                    <span> Number of classes </span>
+                    <h2 class="font-bold">{{model.category.courseCount}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+{{!-- </div> --}}
 
-
+{{!-- 
         <div class="col-lg-4" id="profile">
             <div class="widget-head-color-box navy-bg p-lg text-center">
                 <div class="m-b-md">
@@ -49,34 +72,7 @@
             </div>
             {{/if}}
         </div>
-
-        <div class="col-lg-4">
-            <div class="widget style1 navy-bg">
-                <div class="row">
-                    <div class="col-xs-4">
-                        <i class="fa fa-dollar fa-5x"></i>
-                    </div>
-                    <div class="col-xs-8 text-right">
-                        <span> Revenue from category </span>
-                        <h2 class="font-bold">$325</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-        <div class="widget style1 navy-bg">
-            <div class="row">
-                <div class="col-xs-4">
-                    <i class="fa fa-support fa-5x"></i>
-                </div>
-                <div class="col-xs-8 text-right">
-                    <span> Lessons in {{model.category.title}} </span>
-                    <h2 class="font-bold">{{model.category.courseCount}}</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+ --}}
 
         <div class="col-lg-8">
             <div class="ibox float-e-margins">
@@ -140,4 +136,5 @@
             </div>
         </div>
     </div>
-</div>
+
+
