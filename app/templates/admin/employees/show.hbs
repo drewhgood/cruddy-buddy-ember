@@ -9,7 +9,7 @@
 
                     <ul class="list-unstyled m-t-md">
                     <h2>{{model.employee.first_name}} {{model.employee.last_name}}</h2>
-                    <p>{{model.employee.birthday}}</p>
+                    <p>{{#if model.employee.age}}Age - {{model.employee.age}}{{/if}}</p>
                         {{#if model.employee.email}}
                         <li>
                             <span class="fa fa-envelope m-r-xs"></span>
@@ -102,10 +102,10 @@
                                 </td>
                                  <td>{{ev.duration}}h</td>
 
-                                <td>0/{{ev.course.capacity}}</td>
+                                <td>{{ev.course.num_students}}/{{ev.course.capacity}}</td>
                                 <td></td>
 
-                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                <td>{{#if ev.course.is_full}}<i class="fa fa-check text-navy"></i>{{/if}}</td>
                             </tr>
 
                            {{/each}}                                

@@ -1,25 +1,28 @@
-    <div class="wrapper wrapper-content animated fadeInRight">
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-8">
+      <h2>Courses</h2>
+  </div>
+</div>
+
+
+<div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
         {{#each cour in model.course}} 
             {{#link-to 'admin.courses.show' cour.id tagName='div'}}       
                     <div class="col-lg-4">
-                        <div class="cart-box">
+                        <div class="contact-box">
                             <div class="col-sm-4">
                                 <div class="text-center">
-                                    <img alt="image" class="img-circle m-t-xs img-responsive" src="assets/images/avatar-m.png">
-                                    <div class="m-t-xs font-bold">Graphics designer</div>
+                                    <span class="fa fa-support fa-5x"></span>
+                                    <div class="m-t-xs font-bold">
+                                        <small class="label label-danger">{{cour.spotsFilled}} swimmers</small>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-sm-8">
                                 <h3><strong>{{cour.name}}</strong></h3>
-                                <p><i class="fa fa-map-marker"></i> Riviera State 32/106</p>
-                                <address>
-                                    <strong>{{cour.capacity}}</strong><br>
-                                    <strong>${{cour.session_cost}}</strong><br>
-
-                                    
-                                    
-                                </address>
+                                <p>{{cour.category.title}}</p>
+                                <p>{{cour.startDate}}-{{cour.endDate}}</p>
                             </div>
                             <div class="clearfix"></div>
                         </div>
