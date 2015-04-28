@@ -1,6 +1,6 @@
 <div class="row wrapper border-bottom white-bg page-heading">
     <div class="col-lg-10">
-        <h2>Create A New Lesson</h2>
+        <h2>Create A New Class</h2>
     </div>
 </div>   
 
@@ -9,25 +9,42 @@
         <div class="ibox float-e-margins">
             <div class="ibox-content">
                 <form method="get" class="form-horizontal">
+                <h2>Class Details</h2>
                     <div class="form-group">
                       <div class="col-sm-12">
-                        {{input valueBinding="model.name" class="form-control" placeholder='Course Name' placeholder='First Name'}}
+                        {{input valueBinding="model.name" class="form-control" placeholder='Course Name' placeholder='Class Name'}}
                       </div>
                     </div>
                     
                     <div class="form-group">
+                      <div class="col-sm-12">
+                        {{input valueBinding="model.categories_id" class="form-control" placeholder='Course Name' placeholder='Category'}}
+                      </div>
+                    </div>
 
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        {{input valueBinding="model.instructor_id" class="form-control" placeholder='Course Name' placeholder='Instructor'}}
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
                         <div class="col-sm-12">                                    {{input valueBinding="model.capcity" class="form-control" placeholder='Capacity'}}</div>
                     </div>
 
                     <div class="form-group">
-
-                        <div class="col-sm-12">                                    {{input valueBinding="model.session_cost" class="form-control" placeholder='Cost Per Lesson'}}</div>
+                        <div class="col-sm-12">                                    {{input valueBinding="model.session_cost" class="form-control" placeholder='Cost Per Class'}}</div>
                     </div>
+
+{{!--                     <div class="form-group">
+                        <div class="col-sm-12 course-description">
+                            {{input valueBinding="model.session_cost" class="form-control" placeholder='Class Description'}}
+                        </div>
+                    </div> --}}
 
                     <div class="form-group">
                         <div class="col-sm-12">
-                            <a class="btn btn-default" {{action 'createCourse' class="btn btn-primary"}}>Create Course</a>
+                            <a class="btn btn-default" {{action 'createCourse' class="btn btn-primary"}}>Create</a>
                             
                         </div>
                     </div>
