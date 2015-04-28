@@ -39,7 +39,7 @@ export default Ember.Controller.extend({
       $('#registrationFormPayment').fadeOut(200, function(){
         $('#registrationFormThankyou').fadeIn(1200, function(){
            this.set('properties.checkingOut' , false);
-          $('#cart').fadeOut(1000);
+          $('#cart', '#registrationFormThankyou').fadeOut(1000);
         }); 
       });
     }
