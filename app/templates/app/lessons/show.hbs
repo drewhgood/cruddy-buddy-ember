@@ -1,56 +1,34 @@
+<div class="course-profile">
 <div class="wrapper wrapper-content  animated fadeInRight">
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="row">
-        <div class="col-lg-4" id="profile">
-          <div class="widget-head-color-box navy-bg p-lg text-center">
-            <div class="m-b-md">
-              <h2 class="font-bold no-margins">
-               {{model.course.name}}
-             </h2>
-             <small>{{model.course.category.title}}</small>
-           </div>
-           <span class="fa fa fa-support fa-5x"></span>
-           <ul class="list-unstyled m-t-md">
-          </ul>
-        </div>
-        
-        <div class="widget-text-box">
-          <h4 class="media-heading">Description:</h4>
-          <p>{{model.course.name}}</p>
-        </div>
+  
+  <div clas="row">
+    <div class="col-sm-4">
+      <div class="course-box course-main">
 
+            <h2>{{model.course.name}}</h2>
+             <p>{{model.course.category.title}}</p>
+              <table class="course-table">
+                <thead>
+                  <tr>
+                     <th><h4>Level</h4></th>
+                     <td><h3>{{model.course.level}}</h3></td>
+                  </tr>
+                  <tr>
+                     <th><h4>Cost per session</h4></th>
+                     <td><h3>${{course.session_cost}}</h3></td>
+                  </tr>
+                  <tr>
+                     <th><h4>Description:</h4></th>
+                     <td><p>{{model.course.name}}Neutra umami Austin messenger bag, skateboard meggings 3 wolf moon pug locavore. Cornhole salvia banjo, bespoke pork belly butcher wolf narwhal chia street art Tumblr irony cray. Raw denim four dollar toast Pinterest, hella direct trade flexitarian four loko wolf disrupt synth.</p></td>
+                  </tr>
+                </thead>
+            </table>
       </div>
+    </div>
+  </div>
 
-      <div class="col-lg-4">
-        <div class="widget style1 navy-bg">
-          <div class="row">
-            <div class="col-xs-4">
-              <i class="fa fa-dollar fa-5x"></i>
-            </div>
-            <div class="col-xs-8 text-right">
-              <span> Cost per session </span>
-              <h2 class="font-bold">${{course.session_cost}}</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4">
-        <div class="widget style1 navy-bg">
-          <div class="row">
-            <div class="col-xs-4">
-              <i class="fa fa-support fa-5x"></i>
-            </div>
-            <div class="col-xs-8 text-right">
-              <span> Level </span>
-              <h2 class="font-bold">{{model.course.level}}</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-8">
+  <div class="col-lg-8">
+    <div class="course-box">
         <div class="ibox float-e-margins">
           <div class="ibox-title">
             <h3>Classes</h3>
@@ -60,7 +38,6 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-
                     <th></th>
                     <th>Date</th>
                     <th>Start time</th>
@@ -89,14 +66,10 @@
                 </tbody>
               </table>
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
   </div>
 </div>
 
-
-</div>
