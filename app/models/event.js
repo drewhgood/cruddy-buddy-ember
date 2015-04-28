@@ -4,6 +4,7 @@ export default DS.Model.extend({
 
   course: DS.belongsTo('course', {async: true}),
   employee: DS.belongsTo('employee', {async: true}),
+  client: DS.belongsTo('client', {async: true}),
   start_time: DS.attr('date'),
   duration: DS.attr('number'),
   created_at: DS.attr(),

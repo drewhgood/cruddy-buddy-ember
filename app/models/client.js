@@ -6,6 +6,7 @@ export default DS.Model.extend({
   registrations: DS.hasMany('registration', {async: true}),
   payments: DS.hasMany('payment', {async: true}),
   courses: DS.hasMany('course', {async: true}),
+  events: DS.hasMany('event', {async: true}),
   first_name: DS.attr(), 
   last_name: DS.attr(),
   email: DS.attr(),
@@ -50,11 +51,9 @@ export default DS.Model.extend({
         
         if(d_names){
           return d_names.substring(0, d_names.length - 1);
-        }else{
-          ""
         }
 
-    return 
+    return ""
 
   }.property('dependants_name')
   
