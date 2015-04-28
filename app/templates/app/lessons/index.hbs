@@ -28,7 +28,7 @@
 </div>
 
   <div id="cart">
-    <h2>Your Courses</h2>
+    <h2 class="col-sm-12">Your Courses</h2>
     <div class="row">
         {{#each course in model.courses}}
           {{#if course.inCart}}
@@ -50,8 +50,8 @@
           {{/if}}
         {{/each}}
 
-      <button {{action "expandCart"}}>checkout</button>
-      <button {{action "contractCart"}}>close</button>
+      <a class="btn btn-default cart-button" {{action "expandCart"}}>checkout</a>
+      <a class="btn btn-default cart-button" {{action "contractCart"}}>close</a>
     </div>  
 <br>
 

@@ -382,8 +382,7 @@ padding-right: 8px;
 a {
   color: #33c6dc;
   text-decoration: none;
-
-
+}
 
 #cart {
   position:fixed;
@@ -394,7 +393,17 @@ a {
   width:100%;
   margin-left: 0px;
   display: none;
-  
+}
+
+.cart-button {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.cart-button:hover {
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
 }
 
 #cartClass{
