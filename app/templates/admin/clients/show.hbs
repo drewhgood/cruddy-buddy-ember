@@ -2,14 +2,13 @@
     <div class="course-box profile-main">
         <div class="row">
             <div class="col-sm-12">
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <img src="assets/images/a1.jpg" id="default_profile" class="img-circle circle-border m-b-md" alt="profile">
                 </div>
-                <div class="col-sm-8">
-
+                <div class="col-sm-4">
                     <ul class="list-unstyled m-t-md">
                     <h2>{{model.client.first_name}} {{model.client.last_name}}</h2>
-                    <p>{{model.client.birthday}}</p>
+                    <p>{{model.client.age}} years old</p>
                         {{#if model.client.email}}
                         <li>
                             <span class="fa fa-envelope m-r-xs"></span>
@@ -38,31 +37,26 @@
                         {{/if}}
                     </ul>
                 </div>
-            </div>
-        </div>
-        {{#each dep in model.client.dependants}}  
-                    {{#link-to 'admin.dependants.show' dep.id tagName='div'}}       
+                <div class="col-sm-1"></div>
+                <div class="col-sm-4">
                         <div class="row">
-                            <div class="">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-plus-square-o"></i>
-                                    </div>
-                                    <div class="col-xs-3 text-right">
-                                        <span>Age: {{dep.age}} </span>
-                                        <h2 class="font-bold">{{dep.first_name}}</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> 
-                    {{/link-to}}                               
-                {{/each}}
-        {{#if model.client.notes}}
-        <h4>Notes:</h4>
-        <p>{{model.client.notes}}</p>
-        {{/if}}
+                    <h2> Children </h2>
+                            {{#each dep in model.client.dependants}}  
+                                {{#link-to 'admin.dependants.show' dep.id tagName='div'}}  
+                                    <span class="fa fa-child m-r-xs"></span>
+     
+                                    <label>{{dep.first_name}}: </label> {{dep.age}} years old
+                                {{/link-to}}                               
+                            {{/each}}
+                        </div>
+                </div>
+                    {{#if model.client.notes}}
+                        <h4>Notes:</h4>
+                        <p>{{model.client.notes}}</p>
+                    {{/if}}
+                </div>
+        </div>
     </div>
-
 
      <div class="row">
         <div class="col-sm-12">
