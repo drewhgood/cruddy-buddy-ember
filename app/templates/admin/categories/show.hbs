@@ -1,23 +1,23 @@
 <div class="wrapper wrapper-content  animated fadeInRight">
     <div clas="row">
         <div class="col-sm-4">
-            <div class="course-box course-main">
+            <div class="course-box course-main category-box">
                 <h2>
                    {{model.category.title}}
                 </h2>
                 {{#if model.category.description}}
                 <div>
                     <p><strong>Description</strong></p>
-                    <p>{{model.category.description}}</p>
+                    <p>{{model.category.description}}</p><br>
                 </div>
                 {{/if}}
                 <div class="col-xs-12 text-right">
                     <span> Revenue from category </span>
-                    <h2 class="font-bold">$325</h2>
+                    <h2>$325</h2><br>
                 </div>
                  <div class="col-xs-12 text-right">
                     <span> Number of classes </span>
-                    <h2 class="font-bold">{{model.category.courseCount}}</h2>
+                    <h2>{{model.category.courseCount}}</h2>
                 </div>
             </div>
         </div>
