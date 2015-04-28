@@ -18,9 +18,10 @@
                                         <div class="col-lg-8">
                 
                                             <ul>    
+                                              {{#if course.events}}
                                                 <li>Course startTime: {{model.course.startDate}}</li>
                                                 <li>Course endTime: {{model.course.endDate}} </li>
-                                                {{#if course.events}}
+                                                
                                                     {{#each event in course.events}}
                                                     <li>{{event.displayStartDate}}</li>
                                                     <li>{{event.displayStartTime}}</li>
