@@ -219,7 +219,7 @@
 
                   <div class="form-group">
                       <div class="col-sm-12 col-sm-offset-1">
-                          <button {{action 'createClient' class="btn btn-primary"}}>Next</button>
+                          <button {{action 'registerDependant' class="btn btn-primary"}}>Next</button>
                           
                       </div>
                   </div>
@@ -227,8 +227,106 @@
           </div>
 
 
+
+<!--payment -->
+
+
+           <div id="registrationFormPayment" class="ibox-content">
+              <form method="get" class="form-horizontal">
+                  
+                  <div class="form-group">
+                      <div class="col-sm-6">
+                        {{input valueBinding="model.first_name" class="form-control" placeholder='First Name'  placeholder="Payment"}}
+                      </div>
+                      <div class="col-sm-6">
+                        {{ input valueBinding="model.last_name" class="form-control" placeholder='Last Name'}}
+                      </div>
+                  </div>
+
+
+          
+                  <div class="form-group">
+                      <div class="col-sm-6">
+                      <label class="col-sm-6 control-label">Birthday</label>
+                        {{date-picker date=mydate valueFormat='YYYY-MM-DD' valueBinding="model.birthday" class="col-sm-6"}}
+                      </div>
+                      <div class="col-sm-6">
+                        {{input valueBinding="model.email" class="form-control" placeholder='Email'}}
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-sm-6">
+                      {{input valueBinding="model.phone" class="form-control" placeholder='Phone'}}
+                    </div>
+                    <div class="col-sm-6">
+                      {{input valueBinding="model.phone_alternate" class="form-control" placeholder='Alternate Phone'}}
+                    </div>
+                  </div>
+
+                  
+
+
+
+                  <div class="form-group">
+
+                      <div class="col-sm-12">
+                     
+                      {{view "select" content=names valueBinding="model.gender"  class="col-sm-12" }}
+                      </div>
+                  </div>
+
+                  <label class="col-sm-2 control-label">Address</label>
+                   <div class="form-group">
+
+                      <div class="col-sm-12">
+                          <div class="row">
+                              <div class="col-md-2">
+                                {{input valueBinding="model.a_unit" class="form-control" placeholder='Unit'}}
+                              </div>
+                              <div class="col-md-3">
+                                {{input valueBinding="model.a_number" class="form-control" placeholder='Number'}}
+                              </div>
+                              <div class="col-md-7">
+                                {{input valueBinding="model.a_street" class="form-control" placeholder='Street / Avenue'}}
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                 
+                  <div class="form-group">
+                      <div class="col-sm-6">                                    
+                        {{input valueBinding="model.a_city" class="form-control" placeholder="City"}}
+                      </div>
+                      <div class="col-sm-6">                                    
+                        {{input valueBinding="model.a_postal" class="form-control" placeholder='Postal Code'}}
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <div class="col-sm-12 col-sm-offset-1">
+                          <button {{action 'thankYou' class="btn btn-primary"}}>Next</button>
+                          
+                      </div>
+                  </div>
+              </form>
+          </div>
+
+
+          <!-- thank you -->
+
+
+
+
+            <div id="registrationFormThankyou" class="ibox-content">
+                thank you 
+            </div>
+
+
       </div>
   </div>
+
+
 
 
 

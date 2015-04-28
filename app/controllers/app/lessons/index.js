@@ -27,6 +27,21 @@ export default Ember.Controller.extend({
         $('#registrationFormDependant').fadeIn(1200); 
       });
 
+    },
+
+    registerDependant: function(){
+      $('#registrationFormDependant').fadeOut(200, function(){
+        $('#registrationFormPayment').fadeIn(1200); 
+      });
+    },
+
+    thankYou: function(){
+      $('#registrationFormPayment').fadeOut(200, function(){
+        $('#registrationFormThankyou').fadeIn(1200, function(){
+           this.set('properties.checkingOut' , false);
+          $('#cart').fadeOut(1000);
+        }); 
+      });
     }
   },
 

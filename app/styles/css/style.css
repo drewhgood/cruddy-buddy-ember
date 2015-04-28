@@ -5068,6 +5068,20 @@ body.skin-3 {
   border:none;
 }
 
+#registrationFormPayment {
+  display: none;
+  background-color: inherit;
+  transition: display 2s; 
+  border:none;
+}
+
+#registrationFormThankyou {
+  display: none;
+  background-color: inherit;
+  transition: display 2s; 
+  border:none;
+}
+
 #cart h2{
   color: white;
   position: absolute;
