@@ -150,10 +150,10 @@
                   
                   <div class="form-group">
                       <div class="col-sm-6">
-                        {{input valueBinding="model.first_name" class="form-control" placeholder='First Name'  placeholder="Child's Name"}}
+                        {{input valueBinding="model.first_name" class="form-control" placeholder='First Name'  placeholder="Swimmer's First Name"}}
                       </div>
                       <div class="col-sm-6">
-                        {{ input valueBinding="model.last_name" class="form-control" placeholder='Last Name'}}
+                        {{ input valueBinding="model.last_name" class="form-control" placeholder='Swimmers Last Name'}}
                       </div>
                   </div>
 
@@ -165,7 +165,7 @@
                         {{date-picker date=mydate valueFormat='YYYY-MM-DD' valueBinding="model.birthday" class="col-sm-6"}}
                       </div>
                       <div class="col-sm-6">
-                        {{input valueBinding="model.email" class="form-control" placeholder='Email'}}
+                        {{input valueBinding="model.email" class="form-control" placeholder='Gender'}}
                       </div>
                   </div>
 
@@ -177,23 +177,26 @@
                       {{input valueBinding="model.phone_alternate" class="form-control" placeholder='Alternate Phone'}}
                     </div>
                   </div>
-
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      {{input valueBinding="model.phone" class="form-control" placeholder='Notes'}}
+                    </div>
+                  </div>
                   
 
 
 
-                  <div class="form-group">
+                 <!--  <div class="form-group">
 
                       <div class="col-sm-12">
                      
                       {{view "select" content=names valueBinding="model.gender"  class="col-sm-12" }}
-                      </div>
-                  </div>
-
+                      </div> -->
+<!--                   </div>
                   <label class="col-sm-2 control-label">Address</label>
-                   <div class="form-group">
+                   <div class="form-group"> -->
 
-                      <div class="col-sm-12">
+<!--                       <div class="col-sm-12">
                           <div class="row">
                               <div class="col-md-2">
                                 {{input valueBinding="model.a_unit" class="form-control" placeholder='Unit'}}
@@ -205,17 +208,17 @@
                                 {{input valueBinding="model.a_street" class="form-control" placeholder='Street / Avenue'}}
                               </div>
                           </div>
-                      </div>
-                  </div>
+                      </div> -->
+               <!--    </div> -->
                  
-                  <div class="form-group">
+<!--                   <div class="form-group">
                       <div class="col-sm-6">                                    
                         {{input valueBinding="model.a_city" class="form-control" placeholder="City"}}
                       </div>
                       <div class="col-sm-6">                                    
                         {{input valueBinding="model.a_postal" class="form-control" placeholder='Postal Code'}}
                       </div>
-                  </div>
+                  </div> -->
 
                   <div class="form-group">
                       <div class="col-sm-12 col-sm-offset-1">
