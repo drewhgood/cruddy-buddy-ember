@@ -27,30 +27,129 @@
   </div>
 </div>
 
-<div id="cart" class="row">
-  <h2>Your Courses</h2>
-      {{#each course in model.courses}}
-        {{#if course.inCart}}
-    <div id="cartClass" class="col-lg-2">
-        <div class="cart-box">
-        <div class="closeContact cart" {{action "removeFromCart" course bubbles=false}}>X</div>
-            <div class="col-sm-4 cart">
-                <div class="text-center">
-                  <span class="fa fa-support fa-5x"></span>
+  <div id="cart">
+    <h2>Your Courses</h2>
+    <div class="row">
+        {{#each course in model.courses}}
+          {{#if course.inCart}}
+            <div id="cartClass" class="col-lg-2">
+                <div class="cart-box">
+                <div class="closeContact cart" {{action "removeFromCart" course bubbles=false}}>X</div>
+                    <div class="col-sm-4 cart">
+                        <div class="text-center">
+                          <span class="fa fa-support fa-5x"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <h3><strong>{{course.name}}</strong></h3>
+                     <p> Start Date: {{course.startDate}} </p>zx
+                    </div>
+                    <div class="clearfix"></div>
                 </div>
             </div>
-            <div class="col-sm-8">
-                <h3><strong>{{course.name}}</strong></h3>
-             <p> Start Date: {{course.startDate}} </p>zx
-            </div>
-            <div class="clearfix"></div>
-        </div>
+          {{/if}}
+        {{/each}}
+
+      <button {{action "expandCart"}}>checkout</button>
+      <button {{action "contractCart"}}>close</button>
+    </div>  
+<br>
+
+<!-- registration form -->
+    <div class="row">
+      <div id="registrationContainer" class="wrapper wrapper-content animated fadeInRight">
+    
+      <div class="col-lg-2"></div>
+         <div class="col-lg-8">
+      <div class="ibox float-e-margins">
+          <div id="registrationForm" class="ibox-content">
+              <form method="get" class="form-horizontal">
+                  
+                  <div class="form-group">
+                      <div class="col-sm-6">
+                        {{input valueBinding="model.first_name" class="form-control" placeholder='First Name'  placeholder='First Name'}}
+                      </div>
+                      <div class="col-sm-6">
+                        {{ input valueBinding="model.last_name" class="form-control" placeholder='Last Name'}}
+                      </div>
+                  </div>
+
+
+          
+                  <div class="form-group">
+                      <div class="col-sm-6">
+                      <label class="col-sm-6 control-label">Birthday</label>
+                        {{date-picker date=mydate valueFormat='YYYY-MM-DD' valueBinding="model.birthday" class="col-sm-6"}}
+                      </div>
+                      <div class="col-sm-6">
+                        {{input valueBinding="model.email" class="form-control" placeholder='Email'}}
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="col-sm-6">
+                      {{input valueBinding="model.phone" class="form-control" placeholder='Phone'}}
+                    </div>
+                    <div class="col-sm-6">
+                      {{input valueBinding="model.phone_alternate" class="form-control" placeholder='Alternate Phone'}}
+                    </div>
+                  </div>
+
+                  
+
+
+
+                  <div class="form-group">
+
+                      <div class="col-sm-12">
+                     
+                      {{view "select" content=names valueBinding="model.gender"  class="col-sm-12" }}
+                      </div>
+                  </div>
+
+                  <label class="col-sm-2 control-label">Address</label>
+                   <div class="form-group">
+
+                      <div class="col-sm-12">
+                          <div class="row">
+                              <div class="col-md-2">
+                                {{input valueBinding="model.a_unit" class="form-control" placeholder='Unit'}}
+                              </div>
+                              <div class="col-md-3">
+                                {{input valueBinding="model.a_number" class="form-control" placeholder='Number'}}
+                              </div>
+                              <div class="col-md-7">
+                                {{input valueBinding="model.a_street" class="form-control" placeholder='Street / Avenue'}}
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                 
+                  <div class="form-group">
+                      <div class="col-sm-6">                                    
+                        {{input valueBinding="model.a_city" class="form-control" placeholder="City"}}
+                      </div>
+                      <div class="col-sm-6">                                    
+                        {{input valueBinding="model.a_postal" class="form-control" placeholder='Postal Code'}}
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <div class="col-sm-12 col-sm-offset-1">
+                          <button {{action 'createClient' class="btn btn-primary"}}>Next</button>
+                          
+                      </div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
+
+
+
+      </div>
     </div>
-    {{/if}}
-    {{/each}}
-
-    <button {{action "expandCart"}}>checkout</button>
-    <button {{action "contractCart"}}>close</button>
-
+<!-- registration form end -->
   </div>
 </div>

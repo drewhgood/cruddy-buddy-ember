@@ -5047,6 +5047,14 @@ body.skin-3 {
   cursor: pointer;
 }
 
+#registrationContainter {
+  height:100px;
+}
+
+#registrationForm {
+  background-color: transparent;
+}
+
 #cart h2{
   color: white;
   position: absolute;
