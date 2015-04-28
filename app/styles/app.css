@@ -304,7 +304,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
   padding: 20px;
   height: 400px;
   font-weight: 200;
+  margin-bottom: 20px;
 }
+
 
 .course-main h2 {
   text-transform: uppercase;
@@ -347,6 +349,40 @@ padding-right: 8px;
   color: #fff;
 
 }
+
+.profile-box {
+  color: #646d78;
+  font-weight: 200;
+  text-align: center;
+}
+
+.profile-box h2 {
+  color: #33c6dc;
+  text-transform: uppercase;
+}
+
+.profile-img {
+  display: table;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.admin-course {
+  height: 455px;
+}
+
+.admin-course h2 {
+  margin-top: 0px;
+}
+
+.category-box h2 {
+  margin-top: 0px;
+}
+
+a {
+  color: #33c6dc;
+  text-decoration: none;
+
 
 
 #cart {
