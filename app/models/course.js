@@ -14,6 +14,8 @@ export default DS.Model.extend({
   created_at: DS.attr(),
   updated_at: DS.attr(),
   inCart: false,
+  num_students: DS.attr(),
+  is_full: DS.attr('boolean'),
 
 
   startDate: function(){
