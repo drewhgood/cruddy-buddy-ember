@@ -4,6 +4,7 @@
           <h2>Categories</h2>
       </div>
     </div>
+
     <div class="row">
         {{#each cat in model.category}} 
             {{#link-to 'admin.categories.show' cat.id tagName='div'}}
@@ -11,9 +12,9 @@
                     <div class="contact-box">
                         <div class="col-sm-4">
                             <div class="text-center">
-                                <span class="fa fa-star fa-5x"></span>
+                                <span><img src="assets/images/anchor.png" id="default_profile" class="img-circle circle-border m-b-md profile-img" alt="profile"></span>
                                 <div class="m-t-xs font-bold">
-                                    <small class="label label-danger"> {{cat.courseCount}} Courses</small>
+                                    <p> {{cat.courseCount}} Classes</p>
                                 </div>
                             </div>
                         </div>
