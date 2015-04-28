@@ -5049,10 +5049,23 @@ body.skin-3 {
 
 #registrationContainter {
   height:100px;
+  background-color: transparent;
+
 }
 
-#registrationForm {
-  background-color: transparent;
+#registrationFormClient {
+  background-color: inherit;
+  display: inline;
+  transition: display 2s; 
+  border:none;
+
+}
+
+#registrationFormDependant {
+  display: none;
+  background-color: inherit;
+  transition: display 2s; 
+  border:none;
 }
 
 #cart h2{

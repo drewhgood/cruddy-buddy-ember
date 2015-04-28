@@ -20,6 +20,13 @@ export default Ember.Controller.extend({
       $('#cart').css('height', '250px');
       $('#cart').css('padding-top', '0px');
       $('#cart h2').css('padding-top', '0px');
+    },
+
+    registerClient: function(){
+      $('#registrationFormClient').fadeOut(200, function(){
+        $('#registrationFormDependant').fadeIn(1200); 
+      });
+
     }
   },
 
