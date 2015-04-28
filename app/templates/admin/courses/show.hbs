@@ -1,10 +1,91 @@
 <div class="wrapper wrapper-content  animated fadeInRight">
-    <div class="row">
+    <div clas="row">
+    <div class="col-sm-4">
+      <div class="course-box course-main admin-course">
+
+            <h2>{{model.course.name}}</h2>
+             <p>{{model.course.category.title}}</p>
+              <table class="course-table">
+                <thead>
+                    <tr>
+                        <th><h4>Course Dates</h4></th>
+                        <td>{{model.course.startDate}} - {{model.course.endDate}}</td>
+                    </tr>
+                    <tr>
+                        <th><h4>Level</h4></th>
+                        <td><h3>{{model.course.level}}</h3></td>
+                    </tr>
+                    <tr>
+                        <th><h4>Cost per session</h4></th>
+                        <td><h3>${{course.session_cost}}</h3></td>
+                    </tr>
+                    <tr>
+                         <th><h4>Description:</h4></th>
+                         <td><p>{{model.course.name}}Neutra umami Austin messenger bag, skateboard meggings 3 wolf moon pug locavore. Cornhole salvia banjo, bespoke pork belly butcher wolf narwhal chia street art Tumblr irony cray. Raw denim four dollar toast Pinterest, hella direct trade flexitarian four loko wolf disrupt synth.</p></td>
+                      </tr>
+                </thead>
+            </table>
+      </div>
+    </div>
+  </div>
+
+
+<div class="col-lg-8">
+    <div class="course-box">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h3>Classes</h3>
+          </div>
+          <div class="ibox-content">
+            <div class="table-responsive">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Date</th>
+                    <th>Start time</th>
+                    <th>End time</th>
+                    <th>Duration</th>
+                    <th>Instructor</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {{#each ev in model.course.events}}
+                  <tr>
+                    <td><div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" checked="" class="i-checks" name="input[]" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div></td>
+
+                    <td><small>{{ev.displayStartDate}}</small></td>
+
+                    <td>{{ev.displayStartTime}}</td>
+                    <td>{{ev.displayEndTime}}</td>
+
+                    <td>{{ev.duration}}h</td>
+                    <td>{{ev.employee.fullName}}</td>
+
+                  </tr>
+
+                  {{/each}}                                
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+    {{!-- <div class="row">
         
         <div class="col-lg-6">
             <div class="ibox ">
 
-                <div class="ibox-content">
+                <div class="course-box">
                     <div class="tab-content">
                         <div id="contact-1" class="tab-pane active">
                             <div class="row m-b-lg">
@@ -806,4 +887,4 @@
         </div>
     </div>
     </div>
-</div>
+</div> --}}

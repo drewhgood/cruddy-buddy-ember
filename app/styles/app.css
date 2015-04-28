@@ -365,7 +365,13 @@ padding-right: 8px;
   width: 80%;
 }
 
+.admin-course {
+  height: 455px;
+}
 
+.admin-course h2 {
+  margin-top: 0px;
+}
 
 
 
