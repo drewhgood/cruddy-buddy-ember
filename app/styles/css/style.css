@@ -672,11 +672,9 @@ fieldset[disabled] .btn-info.active {
 }
 .btn-default {
   background-color: transparent;
-  border-color: #434a54;
-  color: #434a54;
+  border-color: #656d79;
+  color: #656d79;
 }
-
-
 .btn-default a {
   color: #434a54;
 
@@ -686,9 +684,9 @@ fieldset[disabled] .btn-info.active {
 .btn-default:active,
 .btn-default.active,
 .open .dropdown-toggle.btn-default {
-  background-color: #bababa;
-  border-color: #bababa;
-  color: #FFFFFF;
+  background-color: transparent;
+  border-color: #25292f;
+  color: #25292f;
 }
 .btn-default:active,
 .btn-default.active,

@@ -89,6 +89,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e7f9', end
   color: #ffffff;
   }
 
+
+#registrationContainer {
+  color: #ffffff;
+  }
+
+
+#registrationContainer legend {
+  color: #ffffff;
+  }
+
+
+
 .lesson-box-name {
   font-family: Raleway;
   font-weight: 200;
@@ -342,10 +354,12 @@ padding-right: 8px;
 .cart-box {
   background: transparent;
   border: 1px solid #fff;
-  padding: 10px;
+  padding: 5px;
+  margin-left: 30px;
+/*  width: 270px;*/
 }
 
-.cart-box h3 {
+.cart-box {
   color: #fff;
 
 }
@@ -382,8 +396,7 @@ padding-right: 8px;
 a {
   color: #33c6dc;
   text-decoration: none;
-
-
+}
 
 #cart {
   position:fixed;
@@ -394,7 +407,21 @@ a {
   width:100%;
   margin-left: 0px;
   display: none;
-  
+  border-radius: 5px 5px 0 0;
+}
+
+.cart-button {
+  border: 1px solid #fff;
+  color: #fff;
+  margin-top: 10px;
+  float: right;
+  margin-right: 50px;
+}
+
+.cart-button:hover {
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
 }
 
 #cartClass{
@@ -430,11 +457,12 @@ a {
 #cart h2{
   color: white;
   position: absolute;
-  top: -46px;
+/*  top: -46px;*/
   margin-left: 15px;
+  margin-top: 60px;
 }
 
-.cart{
+.cart {
   position:relative;
 }
 
