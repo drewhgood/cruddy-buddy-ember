@@ -418,10 +418,27 @@ a {
   margin-right: 50px;
 }
 
+.leave-button {
+  border: 1px solid #fff;
+  color: #fff;
+  margin-top: 10px;
+  display: table;
+  margin: 0 auto;
+}
+
+.leave-button a {
+  color: #fff;
+}
+
 .cart-button:hover {
   border: 1px solid #fff;
   color: #fff;
   background: transparent;
+}
+
+.cart-success {
+  display: table;
+  margin: 0 auto:;
 }
 
 #cartClass{

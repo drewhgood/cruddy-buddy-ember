@@ -5083,6 +5083,7 @@ body.skin-3 {
   background-color: inherit;
   transition: display 2s; 
   border:none;
+  margin-left: 160px;
 }
 
 #cart h2{
@@ -5092,6 +5093,10 @@ body.skin-3 {
   margin-left: 15px;
   padding-top: 0px;
   transition: padding-top 2s;
+}
+
+#cart h2#center {
+  margin-left: 53px;
 }
 
 .cart{
