@@ -1,16 +1,14 @@
 <div class="wrapper wrapper-content  animated fadeInRight">
-
     <div clas="row">
-    <div class="col-sm-4">
-      <div class="course-box course-main admin-course">
-
+        <div class="col-sm-4">
+          <div class="course-box course-main admin-course">
             <h2>{{model.course.name}}</h2>
-             <p>{{model.course.category.title}}</p>
-              <table class="course-table">
+            <p>{{model.course.category.title}}</p>
+            <table class="course-table">
                 <thead>
                     <tr>
                         <th><h4>Course Dates</h4></th>
-                        <td>{{model.course.startDate}} - {{model.course.endDate}}</td>
+                        <td>{{model.course.displayStartDate}} - {{model.course.displayEndDate}}</td>
                     </tr>
                     <tr>
                         <th><h4>Level</h4></th>
@@ -22,183 +20,50 @@
                     </tr>
                     <tr>
                          <th><h4>Description:</h4></th>
-                         <td><p>{{model.course.name}}Neutra umami Austin messenger bag, skateboard meggings 3 wolf moon pug locavore. Cornhole salvia banjo, bespoke pork belly butcher wolf narwhal chia street art Tumblr irony cray. Raw denim four dollar toast Pinterest, hella direct trade flexitarian four loko wolf disrupt synth.</p></td>
+                         <td><p>Neutra umami Austin messenger bag, skateboard meggings 3 wolf moon pug locavore. Cornhole salvia banjo, bespoke pork belly butcher wolf narwhal chia street art Tumblr irony cray. Raw denim four dollar toast Pinterest, hella direct trade flexitarian four loko wolf disrupt synth.</p></td>
                       </tr>
                 </thead>
             </table>
-      </div>
-    </div>
-  </div>
-
-
-<div class="col-lg-8">
-    <div class="course-box">
-        <div class="ibox float-e-margins">
-          <div class="ibox-title">
-            <h3>Classes</h3>
-          </div>
-          <div class="ibox-content">
-            <div class="table-responsive">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th>Date</th>
-                    <th>Start time</th>
-                    <th>End time</th>
-                    <th>Duration</th>
-                    <th>Instructor</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {{#each ev in model.course.events}}
-                  <tr>
-                    <td><div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" checked="" class="i-checks" name="input[]" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div></td>
-
-                    <td><small>{{ev.displayStartDate}}</small></td>
-
-                    <td>{{ev.displayStartTime}}</td>
-                    <td>{{ev.displayEndTime}}</td>
-
-                    <td>{{ev.duration}}h</td>
-                    <td>{{ev.employee.fullName}}</td>
-
-                  </tr>
-
-                  {{/each}}                                
-
-                </tbody>
-              </table>
-{{!-- =======
-            <div class="row">
-                <div class="col-lg-4" id="profile">
-                        <div class="widget-head-color-box navy-bg p-lg text-center">
-                            <div class="m-b-md">
-                            <h2 class="font-bold no-margins">
-                               {{model.course.name}}
-                            </h2>
-                                <p>{{model.course.category.title}}</p>
-                            </div>
-
-                            <div id="defaul_profile" class="img-circle circle-border m-b-md">
-                            <span class="fa fa-support fa-5x"></span></div>
-
-                            <ul class="list-unstyled m-t-md">
-                            <li>
-                                <h4>{{model.course.displayStartDate}} - {{model.course.displayEndDate}}</h4>
-                                <h4>Cost per session: ${{model.course.session_cost}}</h4>
-                            </li>
-                            {{#if model.course.a_number}}
-                            <li>
-                                <span class="fa fa-home m-r-xs"></span>
-                                <label>Address:</label>
-                                {{#if model.course.a_unit}}#{{model.course.a_unit}}-{{/if}}{{model.course.a_number}}, {{a_street}}
-                                {{#if model.course.a_city}}<br> {{model.course.a_city}}, B.C. {{/if}} - {{model.course.a_postal}}
-                            </li>
-                            {{/if}}
-                            {{#if model.course.phone}}
-                            <li>
-                                <span class="fa fa-phone m-r-xs"></span>
-                                <label>Contact:</label>
-                                {{model.course.phone}}
-                                {{#if model.course.phone_alternate}}
-                                  <br><span class="fa fa-phone m-r-xs"></span>
-                                  <label>Alternate:</label>{{model.course.phone_alternate}}
-                                {{/if}}
-                            </li>
-                            {{/if}}
-                        </ul>
-                        </div>
-                        {{#if model.course.description}}
-                        <div class="widget-text-box">
-                            <h4 class="media-heading">About:</h4>
-                            <p>{{model.course.description}}</p>
-                        </div>
-                        {{/if}}
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="widget style1 navy-bg">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <i class="fa fa-dollar fa-5x"></i>
-                            </div>
-                            <div class="col-xs-8 text-right">
-                                <span> Revenue from course </span>
-                                <h2 class="font-bold">$325</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                <div class="widget style1 navy-bg">
-                    <div class="row">
-                        <div class="col-xs-4">
-                            <i class="fa fa-users fa-5x"></i>
-                        </div>
-                        <div class="col-xs-8 text-right">
-                            <span> Capacity</span>
-                            <h2 class="font-bold"> {{model.course.num_students}}/{{model.course.capacity}}</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                <div class="col-lg-8">
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-title">
-                            <h3>{{model.course.title}}</h3>
-
-                        </div>
-                        <div class="ibox-content">
-                            <div class="row">
-                                <div class="col-sm-5 m-b-xs"><select class="input-sm form-control input-s-sm inline">
-                                    <option value="0">Option 1</option>
-                                    <option value="1">Option 2</option>
-                                    <option value="2">Option 3</option>
-                                    <option value="3">Option 4</option>
-                                </select>
-                                </div>
-                                <div class="col-sm-4 m-b-xs">
-                                    <div data-toggle="buttons" class="btn-group">
-                                        <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> Day </label>
-                                        <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> Week </label>
-                                        <label class="btn btn-sm btn-white"> <input type="radio" id="option3" name="options"> Month </label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="input-group"><input type="text" placeholder="Search" class="input-sm form-control"> <span class="input-group-btn">
-                                        <button type="button" class="btn btn-sm btn-primary"> Go!</button> </span></div>
-                                </div>
-                            </div>
-                            <div class="table-responsive">
-                                <table class="table table-striped">
-                                    <thead>
-                                    <tr>
-                                        <th>Days</th>
-                                        <th>Time</th>
-                                        <th>Duration</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    {{#each ev in model.course.events}}
-                                        <tr>
-                                            <td>{{ev.displayStartDate}}</td>
-                                            <td>{{ev.displayStartTime}}</td>
-                                            <td>{{ev.duration}} hours</td>
-                                        </tr>
-                                   {{/each}}                                   
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
->>>>>>> 164358abf33b1d85afd410f67b4fd0ea8c546cdb --}}
-            </div>
-          </div>
         </div>
-      </div>
     </div>
+</div>
+
+
+    <div class="col-lg-8">
+        <div class="course-box">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h3>Classes</h3>
+                </div>
+                <div class="ibox-content">
+                    <div class="table-responsive">
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Date</th>
+                            <th>Start time</th>
+                            <th>End time</th>
+                            <th>Duration</th>
+                            <th>Instructor</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {{#each ev in model.course.events}}
+                              <tr>
+                                <td><div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" checked="" class="i-checks" name="input[]" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div></td>
+                                <td><small>{{ev.displayStartDate}}</small></td>
+                                <td>{{ev.displayStartTime}}</td>
+                                <td>{{ev.displayEndTime}}</td>
+                                <td>{{ev.duration}}h</td>
+                                <td>{{ev.employee.fullName}}</td>
+                              </tr>
+                          {{/each}}                                
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
 </div>

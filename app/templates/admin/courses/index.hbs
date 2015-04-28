@@ -4,13 +4,11 @@
   </div>
 </div>
 
-
 <div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
         {{#each cour in model.course}} 
             {{#link-to 'admin.courses.show' cour.id tagName='div'}}       
                     <div class="col-lg-4">
-
                         <div class="contact-box">
                             <div class="col-sm-4">
                                 <div class="text-center">
@@ -25,14 +23,6 @@
                                 <p>{{cour.category.title}}</p>
                                 <p>{{cour.displayStartDate}}-{{cour.displayEndDate}}</p>
                             </div>
-{{!-- =======
-                        <div class="lesson-box">
-                                <div class="lesson-box-name">{{cour.name}}</div><br>
-                                    <p>Capacity: <strong>{{cour.capacity}}</strong></p>
-                                    <p>Session Cost: <strong>${{cour.session_cost}}</strong></p>
-                                    <p>Description:</p>
-                                    <p>Vegan fingerstache DIY, fap cred beard distillery four loko. VHS messenger bag Pitchfork McSweeney's church-key authentic</p>
->>>>>>> frontend/edits --}}
                             <div class="clearfix"></div>
                         </div>
                     </div>
