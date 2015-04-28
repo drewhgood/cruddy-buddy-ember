@@ -16,54 +16,22 @@ export default DS.Model.extend({
   inCart: false,
   num_students: DS.attr(),
   is_full: DS.attr('boolean'),
+  startDate: DS.attr('date'),
+  endDate: DS.attr('date'),
 
+  displayStartDate: function(){
 
-  startDate: function(){
+    var date = this.get('startDate')
 
-    if(this.get('events.length')===0){
-      return "TBD"
-    }
+    return moment(date).format('MMM Do');
+  }.property('startDate'),
 
-    var events = this.get('events').toArray();
+  displayEndDate: function(){
 
+    var date = this.get('endDate')
 
-    var smallestDate = new Date(events[0].get('start_time'));
-
-
-
-    events.forEach(function(e){  
-
-      var event_start_time =  e.get('start_time');
-
-      if(smallestDate > event_start_time) {
-        smallestDate = event_start_time;
-      }
-    });
-
-
-
-    return moment(smallestDate).format('MMM Do');
-  }.property('events.@each.start_time'),
-
-  endDate: function(){
-    if(this.get('events.length')===0){
-      return "TBD"
-    }
-
-    var events = this.get('events').toArray();
-    var greaterDate = new Date(events[0].get('start_time'));
-
-    events.forEach(function(e){  
-
-      var event_start_time =  new Date(e.get('start_time'));
-
-      if(greaterDate < event_start_time) {
-        greaterDate = event_start_time;
-      }
-    });
-
-    return moment(greaterDate).format('MMM Do');
-  }.property('events.@each.start_time'),
+    return moment(date).format('MMM Do');
+  }.property('endtDate'),
 
   spotsFilled: function() {
     return this.get('registrations.length');

@@ -9,7 +9,7 @@ module.exports = function(environment) {
    contentSecurityPolicy: {
    'font-src': "'self' http://fonts.gstatic.com",
    'style-src': "'self' http://fonts.googleapis.com/",
-   'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com",
+   'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com"
    },
    EmberENV: {
      FEATURES: {

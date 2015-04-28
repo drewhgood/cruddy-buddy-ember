@@ -1,20 +1,5 @@
-
-<h1>admin index</h1>
-<ul>
-  {{#each client in model}}
-    <li>{{client.first_name}} {{client.last_name}}</li>
-  {{/each}}
-</ul>
-<!-- {{ember-chart type='Line' data=model.chartData width=200 height=200}} -->
-
-
-
-!{{#each dash in model.dashboards}}
-
-
-
+{{#each dash in model.dashboards}}
 <div class='row'>
-
     <div class="col-lg-3">
         <div class="ibox float-e-margins">
             <div class="ibox-title">

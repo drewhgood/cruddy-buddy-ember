@@ -99,28 +99,29 @@
 
                                 <th></th>
                                 <th>Name</th>
-                                <th>Start - End</th>
+                                <th>Date</th>
                                 <th>Course Duration</th>
                                 <th>Capacity</th>
-                                <th>Full</th>
+                                <th>Full{{model.client.courses.events}}</th>
                             </tr>
                             </thead>
                             <tbody>
+
                             {{#each ev in model.client.events}}
                             <tr>
                                 <td><div class="icheckbox_square-green checked" style="position: relative;"><input type="checkbox" checked="" class="i-checks" name="input[]" style="position: absolute; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div></td>
 
-                                <td><small>{{ev.course.name}}</small></td>
+                                <td><small>{{#link-to 'admin.courses.show' ev.course.id}}{{ev.course.name}}{{/link-to}}</small></td>
 
                                 <td>
-                                    {{#link-to 'admin.courses.show' ev.course.id}}{{course.name}}{{/link-to}}
+                                    {{ev.displayStartDate}}
                                 </td>
                                  <td>{{ev.duration}}h</td>
 
-                                <td>0/{{ev.course.capacity}}</td>
+                                <td>{{ev.course.num_students}}/{{ev.course.capacity}}</td>
                                 <td></td>
 
-                                <td><a href="#"><i class="fa fa-check text-navy"></i></a></td>
+                                <td>{{#if ev.course.is_full}}<i class="fa fa-check text-navy"></i>{{/if}}</td>
                             </tr>
 
                            {{/each}}                                
