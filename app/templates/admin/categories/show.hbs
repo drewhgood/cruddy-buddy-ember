@@ -119,7 +119,7 @@
                                         <tr>
                                             <td><small>{{#link-to 'admin.courses.show' cour.id }}{{cour.name}}{{/link-to}}</small></td>
                                             <td>{{cour.spotsFilled}}/{{cour.capacity}}</td>
-                                            <td>{{cour.startDate}}-{{cour.endDate}}</td>
+                                            <td>{{cour.displayStartDate}}-{{cour.displayEndDate}}</td>
                                             <td>{{#if cour.is_full}}<a href="#"><i class="fa fa-check text-navy"></i></a>{{/if}}</td>
                                         </tr>
                                    {{/each}}                                   
