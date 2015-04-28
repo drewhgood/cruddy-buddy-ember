@@ -479,4 +479,9 @@ a {
     display:none;
   }
 
+.sidebar-collapse {
+  height: 100%;
+  position: fixed;
+}
+
   

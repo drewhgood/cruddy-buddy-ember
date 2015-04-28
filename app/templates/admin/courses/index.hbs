@@ -1,6 +1,6 @@
 <div class="row wrapper border-bottom white-bg page-heading">
   <div class="col-lg-8">
-      <h2>Courses</h2>
+      <h2>Classes</h2>
   </div>
 </div>
 
@@ -12,14 +12,14 @@
                         <div class="contact-box">
                             <div class="col-sm-4">
                                 <div class="text-center">
-                                    <span class="fa fa-support fa-5x"></span>
+                                    <span><img src="assets/images/lifering.png" id="default_profile" class="img-circle circle-border m-b-md profile-img" alt="profile"></span>
                                     <div class="m-t-xs font-bold">
-                                        <small class="label label-danger">{{cour.num_students}} swimmers</small>
+                                        <p>{{cour.num_students}} swimmers</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-8">
-                                <h3><strong>{{cour.name}}</strong></h3>
+                                <h3>{{cour.name}}</h3>
                                 <p>{{cour.category.title}}</p>
                                 <p>{{cour.displayStartDate}}-{{cour.displayEndDate}}</p>
                             </div>
