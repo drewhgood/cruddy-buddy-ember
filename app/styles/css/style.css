@@ -5032,6 +5032,10 @@ body.skin-3 {
   position:fixed;
 }
 
+#checkout{
+  margin-right: 11px;
+}
+
 .navy-bg {
   background-color: #2F4050;
 }
@@ -5054,7 +5058,7 @@ body.skin-3 {
 
 #registrationFormClient {
   background-color: inherit;
-  display: inline;
+  display: none;
   transition: display 2s; 
   border:none;
 

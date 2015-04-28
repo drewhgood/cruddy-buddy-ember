@@ -10,6 +10,7 @@ export default Ember.Controller.extend({
   actions:{
     expandCart: function(){
       this.set('properties.checkingOut' , true);
+      $('#registrationFormClient').fadeIn(500);
       $('#cart').css('height', '100%');
       $('#cart').css('padding-top', '55px');
       $('#cart h2').css('padding-top', '55px');
