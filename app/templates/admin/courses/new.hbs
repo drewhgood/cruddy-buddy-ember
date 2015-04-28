@@ -1,4 +1,5 @@
 <div class="row wrapper border-bottom white-bg page-heading">
+{{!-- <<<<<<< HEAD
   <div class="col-lg-10">
     <h2>Create New Lesson</h2>
     <ol class="breadcrumb">
@@ -118,6 +119,71 @@
 {{/if}}
 </div>
 
+======= --}}
+    <div class="col-lg-10">
+        <h2>Create A New Class</h2>
+    </div>
+</div>   
+
+<br>
+   <div class="col-lg-8">
+        <div class="ibox float-e-margins course-box">
+            <div class="ibox-content">
+                <form method="get" class="form-horizontal">
+                <h2>Class Details</h2>
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        {{input valueBinding="model.name" class="form-control" placeholder='Course Name' placeholder='Class Name'}}
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        {{input valueBinding="model.categories_id" class="form-control" placeholder='Course Name' placeholder='Category'}}
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="col-sm-12">
+                        {{input valueBinding="model.instructor_id" class="form-control" placeholder='Course Name' placeholder='Instructor'}}
+                      </div>
+                    </div>
+                    
+                   
+                    
+                     
+                    <div class="form-group">
+                        <div class="col-sm-3"> 
+                            {{input valueBinding="model.capcity" class="form-control" placeholder='Capacity'}}
+                        </div>
+                    </div>
+
+                      
+                    <div class="form-group">
+                        <div class="col-sm-3">  
+                            {{input valueBinding="model.session_cost" class="form-control" placeholder='Cost Per Class'}}
+                        </div>
+                    </div>
+                 
+
+{{!--                     <div class="form-group">
+                        <div class="col-sm-12 course-description">
+                            {{input valueBinding="model.session_cost" class="form-control" placeholder='Class Description'}}
+                        </div>
+                    </div> --}}
+
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <a class="btn btn-default" {{action 'createCourse' class="btn btn-primary"}}>Create</a>
+                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{{!-- >>>>>>> frontend/edits --}}
 
 
 
