@@ -1,70 +1,51 @@
-<div id="wrapper">
-
+<div id="wrapper profile" class="show">
     <nav class="navbar-default navbar-static-side" role="navigation">
         <div class="sidebar-collapse">
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
                     <div class="dropdown profile-element"> <span></span>
-                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">David Williams</strong>
-                             </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span> </span> </a>
-                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                    <img alt="image" class="img-circle avatar" src="/assets/images/avatar.png">
+                            
+                            <span class="clear profile-name">David Williams
+                             </span>
+{{!--                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
                                 <li><a href="login.html">Logout</a></li>
                             </ul>
-                    </div>
+ --}}                    </div>
                     <div class="logo-element">
-                        
+                        IN+
                     </div>
                 </li>
-                <li>
+
+                <li>{{#link-to 'admin.clients' class="nav-label"}}
                    <a>
-                        <i class="fa fa-group"></i> <span>{{#link-to 'admin.clients' class="nav-label"}} Clients {{/link-to}}</span>
-                   </a>
-                </li>
-                <li>
+                        <i class="fa fa-group"></i> <span> Clients</span>
+                   </a>{{/link-to}}
+                </li> 
+                <li>{{#link-to 'admin.employees' class="nav-label"}}
                    <a> 
-                        <i class="fa fa-user"></i> <span>{{#link-to 'admin.employees' class="nav-label"}} Employees {{/link-to}}</span>
-                   </a>
+                        <i class="fa fa-user"></i> <span> Employees</span>
+                   </a>{{/link-to}}
                 </li>
 
-                <li>
+                <li>{{#link-to 'admin.categories' class="nav-label"}}
                    <a> 
-                        <i class="fa fa-star"></i> <span>{{#link-to 'admin.categories' class="nav-label"}} Categories {{/link-to}}</span>
-                   </a>
+                        <i class="fa fa-star"></i> <span> Categories </span>
+                   </a>{{/link-to}}
                 </li>
 
-                <li>
+                <li>{{#link-to 'admin.payments' class="nav-label"}}
                    <a>
-                        <i class="fa fa-calendar"></i> <span>{{#link-to 'admin.payments' class="nav-label"}} Payments {{/link-to}}</span>
-                   </a>
+                        <i class="fa fa-calendar"></i> <span> Payments</span>
+                   </a> {{/link-to}}
                 </li>
-
-                
             </ul>
-
         </div>
     </nav>
 
     <div id="page-wrapper" class="gray-bg">
         <div class="row border-bottom">
-            <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
-                <div class="navbar-header">
-                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                    <form role="search" class="navbar-form-custom" method="post" action="search_results.html">
-                        <div class="form-group">
-                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
-                        </div>
-                    </form>
-                </div>
-                <ul class="nav navbar-top-links navbar-right">
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-sign-out"></i> Log out
-                        </a>
-                    </li>
-                </ul>
-
-            </nav>
+            
         </div>
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">

@@ -5012,7 +5012,9 @@ body.skin-3 {
   width:100%;
   margin-left: 0px;
   display: none;
-  
+  padding-top: 0px;
+  transition: height 2s, padding-top 2s ; 
+
 }
 
 #cartClass{
@@ -5045,11 +5047,48 @@ body.skin-3 {
   cursor: pointer;
 }
 
+#registrationContainter {
+  height:100px;
+  background-color: transparent;
+
+}
+
+#registrationFormClient {
+  background-color: inherit;
+  display: inline;
+  transition: display 2s; 
+  border:none;
+
+}
+
+#registrationFormDependant {
+  display: none;
+  background-color: inherit;
+  transition: display 2s; 
+  border:none;
+}
+
+#registrationFormPayment {
+  display: none;
+  background-color: inherit;
+  transition: display 2s; 
+  border:none;
+}
+
+#registrationFormThankyou {
+  display: none;
+  background-color: inherit;
+  transition: display 2s; 
+  border:none;
+}
+
 #cart h2{
   color: white;
   position: absolute;
   top: -46px;
   margin-left: 15px;
+  padding-top: 0px;
+  transition: padding-top 2s;
 }
 
 .cart{
