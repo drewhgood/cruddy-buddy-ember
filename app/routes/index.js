@@ -1,7 +1,7 @@
   import Ember from 'ember';
 
 export default Ember.Route.extend({
-  // model: function() {
-  //       return {courses: this.store.find('course')};
-  // }
+  redirect: function(){
+    this.transitionTo('/home')
+  }
 });

@@ -9,9 +9,7 @@ export default Ember.Route.extend({
 
   actions: {
     addToCart: function(course) {
-      $('#cart').fadeIn(1000, function(){
-        $('#registrationFormClient').fadeIn(500);
-      });
+      $('#cart').fadeIn(1000);
         course.setProperties({
         inCart: true,
       })     
