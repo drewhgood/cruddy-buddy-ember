@@ -20,13 +20,16 @@
                                             <ul>    
                                                 <li>Course startTime: {{model.course.startDate}}</li>
                                                 <li>Course endTime: {{model.course.endDate}} </li>
-                                                {{#each event in course.events}}
-                                                <li>{{event.displayStartDate}}</li>
-                                                <li>{{event.displayStartTime}}</li>
-                                                <li>{{event.displayEndTime}}</li>
-                                                <li>{{event.duration}}</li>
-                                                
-                                                {{/each}}
+                                                {{#if course.events}}
+                                                    {{#each event in course.events}}
+                                                    <li>{{event.displayStartDate}}</li>
+                                                    <li>{{event.displayStartTime}}</li>
+                                                    <li>{{event.displayEndTime}}</li>
+                                                    <li>{{event.duration}}</li>
+                                                    
+                                                    {{/each}}
+
+                                                {{/if}}
                                                 <li>Email: something@email.com</li>
                                                 <li>Phone: 778.855.4530</li>
                                                 <li>Age: 27</li>
