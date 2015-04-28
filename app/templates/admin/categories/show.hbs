@@ -1,54 +1,4 @@
 <div class="wrapper wrapper-content  animated fadeInRight">
-{{!-- <<<<<<< HEAD
-            <div class="row">
-                <div class="col-lg-4" id="profile">
-                        <div class="widget-head-color-box navy-bg p-lg text-center">
-                            <div class="m-b-md">
-                            <h2 class="font-bold no-margins">
-                               {{model.category.title}}
-                            </h2>
-                                <small>{{model.category.birthday}}</small>
-                            </div>
-
-                            <div id="defaul_profile" class="img-circle circle-border m-b-md">
-                            <span class="fa fa-star fa-5x"></span></div>
-
-                            <ul class="list-unstyled m-t-md">
-                            {{#if model.category.email}}
-                            <li>
-                                <span class="fa fa-envelope m-r-xs"></span>
-                                <label>Email:</label>
-                                {{model.category.email}}
-                            </li>
-                            {{/if}}
-                            {{#if model.category.a_number}}
-                            <li>
-                                <span class="fa fa-home m-r-xs"></span>
-                                <label>Address:</label>
-                                {{#if model.category.a_unit}}#{{model.category.a_unit}}-{{/if}}{{model.category.a_number}}, {{a_street}}
-                                {{#if model.category.a_city}}<br> {{model.category.a_city}}, B.C. {{/if}} - {{model.category.a_postal}}
-                            </li>
-                            {{/if}}
-                            {{#if model.category.phone}}
-                            <li>
-                                <span class="fa fa-phone m-r-xs"></span>
-                                <label>Contact:</label>
-                                {{model.category.phone}}
-                                {{#if model.category.phone_alternate}}
-                                  <br><span class="fa fa-phone m-r-xs"></span>
-                                  <label>Alternate:</label>{{model.category.phone_alternate}}
-                                {{/if}}
-                            </li>
-                            {{/if}}
-                        </ul>
-                        </div>
-                        {{#if model.category.description}}
-                        <div class="widget-text-box">
-                            <h4 class="media-heading">About:</h4>
-                            <p>{{model.category.description}}</p>
-                        </div>
-                        {{/if}}
-======= --}}
     <div clas="row">
         <div class="col-sm-4">
             <div class="course-box course-main category-box">
@@ -59,7 +9,7 @@
                 <div>
                     <p><strong>Description</strong></p>
                     <p>{{model.category.description}}</p><br>
-{{!-- >>>>>>> frontend/edits --}}
+
                 </div>
                 {{/if}}
                 <div class="col-xs-12 text-right">
@@ -73,73 +23,11 @@
             </div>
         </div>
     </div>
-{{!-- </div> --}}
-
-{{!-- 
-        <div class="col-lg-4" id="profile">
-            <div class="widget-head-color-box navy-bg p-lg text-center">
-                <div class="m-b-md">
-                <h2 class="font-bold no-margins">
-                   {{model.category.title}}
-                </h2>
-                </div>
-
-                <div id="defaul_profile" class="img-circle circle-border m-b-md">
-                <span class="fa fa-star fa-5x"></span></div>
-
-                <ul class="list-unstyled m-t-md">
-                {{#if model.category.email}}
-                <li>
-                    <span class="fa fa-envelope m-r-xs"></span>
-                    <label>Email:</label>
-                    {{model.category.email}}
-                </li>
-                {{/if}}
-                {{#if model.category.a_number}}
-                <li>
-                    <span class="fa fa-home m-r-xs"></span>
-                    <label>Address:</label>
-                    {{#if model.category.a_unit}}#{{model.category.a_unit}}-{{/if}}{{model.category.a_number}}, {{a_street}}
-                    {{#if model.category.a_city}}<br> {{model.category.a_city}}, B.C. {{/if}} - {{model.category.a_postal}}
-                </li>
-                {{/if}}
-                {{#if model.category.phone}}
-                <li>
-                    <span class="fa fa-phone m-r-xs"></span>
-                    <label>Contact:</label>
-                    {{model.category.phone}}
-                    {{#if model.category.phone_alternate}}
-                      <br><span class="fa fa-phone m-r-xs"></span>
-                      <label>Alternate:</label>{{model.category.phone_alternate}}
-                    {{/if}}
-                </li>
-                {{/if}}
-            </ul>
-            </div>
-            {{#if model.category.description}}
-            <div class="widget-text-box">
-                <h4 class="media-heading">About:</h4>
-                <p>{{model.category.description}}</p>
-            </div>
-            {{/if}}
-        </div>
- --}}
-
         <div class="col-lg-8">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <h3>{{model.category.title}}</h3>
                 </div>
-                <div class="ibox-content">
-                    <div class="row">
-                        <div class="col-sm-5 m-b-xs"><select class="input-sm form-control input-s-sm inline">
-                            <option value="0">Option 1</option>
-                            <option value="1">Option 2</option>
-                            <option value="2">Option 3</option>
-                            <option value="3">Option 4</option>
-                        </select>
-                        </div>
-{{!-- <<<<<<< HEAD --}}
                         <div class="ibox-content">
                             <div class="row">
                                 <div class="col-sm-5 m-b-xs"><select class="input-sm form-control input-s-sm inline">
@@ -183,8 +71,7 @@
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-                    </div>
+                 
                 </div>
             </div>
         </div>
