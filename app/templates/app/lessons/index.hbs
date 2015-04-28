@@ -29,12 +29,6 @@
 
 <div id="cart" class="row">
   <h2>Your Courses</h2>
-
-
-<button {{action "show" class="btn btn-primary"}}>show</button>
-<button {{action "hide" class="btn btn-primary"}}>hide</button>
-
-
       {{#each course in model.courses}}
         {{#if course.inCart}}
     <div id="cartClass" class="col-lg-2">
@@ -47,7 +41,7 @@
             </div>
             <div class="col-sm-8">
                 <h3><strong>{{course.name}}</strong></h3>
-  {{!--               <p> Start Date: {{course.startDate}} </p> --}}
+             <p> Start Date: {{course.startDate}} </p>zx
             </div>
             <div class="clearfix"></div>
         </div>
@@ -55,7 +49,8 @@
     {{/if}}
     {{/each}}
 
-    <button {{action "test"}}>checkout</button>
-    {{controller.properties.checkingOut}}
+    <button {{action "expandCart"}}>checkout</button>
+    <button {{action "contractCart"}}>close</button>
+
   </div>
 </div>
