@@ -483,6 +483,19 @@ a {
   position:relative;
 }
 
+#admin-dash h5 {
+/*  color: #33c6dc;*/
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+
+#admin-dash h1 {
+  color: #33c6dc;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
 @media (min-width: 768px){
 
 .form-horizontal .control-label {
