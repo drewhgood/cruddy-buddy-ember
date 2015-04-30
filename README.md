@@ -5,7 +5,7 @@ Splashers is a multi-business platform that provides an easy and quick way for a
 ## Built with:
 
 * [Ember CLI](http://www.ember-cli.com/)
-* Ruby on Rails
+* Ruby on Rails (https://github.com/Andsbf/scobb)
 * Bootstrap
 
 
